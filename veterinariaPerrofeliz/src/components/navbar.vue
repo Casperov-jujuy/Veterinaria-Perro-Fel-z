@@ -61,7 +61,7 @@ export default {
     };
   },
   mounted() {
-    this.navigateToAbout()
+    this.navigateToHome()
   },
   methods: {     
     navigateToHome() {
