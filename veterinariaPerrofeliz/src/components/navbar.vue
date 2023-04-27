@@ -9,7 +9,7 @@
       class="menu-item"
       v-for="link in links"
       :key="link.id"
-      @click="sliderIndicator(link.id)"
+      @click="sliderIndicator(link.id,0)"
       :ref="'menu-item_' + link.id"
     >
       <RouterLink
@@ -64,13 +64,13 @@ export default {
     this.navigateToAbout()
   },
   methods: {     
-    navigateToAbout() {
+    navigateToHome() {
       router.push('/')
-      this.sliderIndicator(1)
+      this.sliderIndicator(1,5)
     },
-    sliderIndicator(id) {
+    sliderIndicator(id,add) {
       let el = this.$refs[`menu-item_${id}`][0];
-      this.sliderPosition = el.offsetLeft;
+      this.sliderPosition = el.offsetLeft+add;
       this.selectedElementWidth = el.offsetWidth;
       this.selectedIndex = id;
     },
