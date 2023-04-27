@@ -1,3 +1,6 @@
+<script setup>
+import carrousel from '../components/carrousel.vue'
+</script>
 <template>
     <span class="w-100">
         <p class="text-5xl text-center text-gray-700 py-10">SECCION ABOUT</p>
@@ -7,10 +10,15 @@
                     <img :src="servicio.image" alt="imagen" class="object-cover w-full h-full" />
                 </div>
                 <div :class="index % 2 === 0 ? 'order-last sm:order-first' : 'order-first sm:order-last'" class="">
-                    <h1 class="text-4xl text-center text-gray-600 font-bold my-5">{{ servicio.title }}</h1>
+                    <h1 class="text-4xl text-center text-teal-600 font-bold my-5">{{ servicio.title }}</h1>
                     <p class="text-xl mx-5 text-gray-500 whitespace-pre-wrap leading-10">{{ servicio.text }}</p>
                 </div>
             </div>
+        </div>
+
+        <div>
+            <h1 class="text-5xl text-center text-gray-700 my-10">Nuestra Vision </h1>
+                    <carrousel />
         </div>
 
     </span>
@@ -38,12 +46,7 @@ export default {
                     text:
                         `Nos comprometemos con la educación continua y el perfeccionamiento de técnicas y conocimientos, para ofrecer siempre una atención médica calificada y de calidad a nuestros clientes.\nTenemos una mirada protectora en cuanto a la fauna silvestre de nuestra provincia, realizamos colaboraciones y aportes para la conservación de la misma.Nuestra empresa es una asociación de respetados profesionales veterinarios de la región  que trabajan fuertemente priorizando la calidad del servicio.`,
                     image: "https://img.freepik.com/premium-photo/medical-student-smiling-camera-during-class_13339-297488.jpg?w=740",
-                },
-                {
-                    title: "Nuestra Visión",
-                    text: `Dentro de los objetivos a largo plazo de Perro Feliz tenemos:\n\t\tExpandirnos para ofrecer a nuestros clientes una nueva forma de atención especializada y de alta tecnología a nuestros queridos caninos.\n\t\tSer la veterinaria líder en ofrecer servicios de salud preventiva y tratamiento de enfermedades en animales, trabajando en colaboración con nuestros clientes para lograr una vida saludable para sus mascotas.\n\t\tImplementar un sistema de consultas virtuales para abarcar todas las distintas zonas de la provincia a través de una aplicación móvil, que permita reuniones a distancia y consultoría.\n\t\tExpandir nuestros servicios para incluir la atención médica a animales exóticos.`,
-                    image: "https://img.freepik.com/premium-photo/young-veterinarian-smiling-while-using-digital-tablet-near-cat-sits-table-vet-clinic_8595-20484.jpg?w=740",
-                },
+                }
             ],
         };
     },
