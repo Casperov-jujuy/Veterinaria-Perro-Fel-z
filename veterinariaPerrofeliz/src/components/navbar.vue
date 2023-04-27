@@ -13,6 +13,7 @@
       :ref="'menu-item_' + link.id"
     >
       <RouterLink
+        v-slot="{route}"
         :to="`${link.to}`"
         class="menu-link"
         active-class="text-blue-700 font-bold"
@@ -25,7 +26,11 @@
 </template>
 
 <script>
+
+import { useRoute } from 'vue-router';
+import router from '@/router'
 export default {
+  
   data() {
     return {
       sliderPosition: 0,
@@ -56,9 +61,13 @@ export default {
     };
   },
   mounted() {
-    this.sliderIndicator(1);
+    this.navigateToAbout()
   },
   methods: {     
+    navigateToAbout() {
+      router.push('/')
+      this.sliderIndicator(1)
+    },
     sliderIndicator(id) {
       let el = this.$refs[`menu-item_${id}`][0];
       this.sliderPosition = el.offsetLeft;

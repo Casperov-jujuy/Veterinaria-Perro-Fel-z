@@ -2,7 +2,8 @@
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 import navbar from './components/navbar.vue'
 import '@fortawesome/fontawesome-free/css/all.css';
-import '@fortawesome/fontawesome-free/js/all.js';
+import '@fortawesome/fontawesome-free/js/all.js'; 
+import 'animate.css';
 </script>
 
 <template>
@@ -42,8 +43,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
           enter-active-class="animate__animated animate__fadeInUp"
           leave-active-class="animate__animated animate__fadeOutDown" 
           mode="out-in">          
-          <Loader v-if="loading" class="scale-150"></Loader>
-          <component v-else :is="Component" class="max-w-7xl mx-auto" />
+          <component :is="Component" class="max-w-7xl mx-auto" />
         </Transition>
   </RouterView>
 
