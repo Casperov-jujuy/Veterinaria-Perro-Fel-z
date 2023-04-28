@@ -21,13 +21,13 @@ setInterval(function(){
       <input type="radio" name="radio-btn" id="radio3">
       <!-- Imagenes -->
       <div class="slide first">
-        <img src="@/assets/img/c1.png" alt="">
+        <img src="@/assets/img/a1.jpg" alt="">
       </div>
       <div class="slide">
-        <img src="@/assets/img/c2.png" alt="">
+        <img src="@/assets/img/a2.jpg" alt="">
       </div>
       <div class="slide">
-        <img src="@/assets/img/c3.png" alt="">
+        <img src="@/assets/img/a3.jpg" alt="">
       </div>
 
       <!-- Nvegacion automatica -->
@@ -63,7 +63,7 @@ setInterval(function(){
 }
 .slide{
   width: 20%;
-  transition: 2s;
+  transition: 3s;
 }
 .slide img{
   width: 80rem;
@@ -85,7 +85,7 @@ setInterval(function(){
   margin-right:4px;
   border-radius: 10px;
   cursor: pointer;
-  transition:2s;
+  transition:1s;
 }
 .manual-btn:hover{
   background-color: aliceblue;
@@ -113,7 +113,7 @@ setInterval(function(){
   border: 3px solid #f3f3f3;
   padding: 5px;
   border-radius: 10px;
-  transition: 2s;
+  transition: 3s;
 }
 .navigation-auto div:not(:last-child){
   margin-right: 40px;
