@@ -1,13 +1,14 @@
 <script setup>
-let position = 1;
-setInterval(function(){
-    document.getElementById('radio'+position).checked = true;
-    position++;
-    if(position>3){
-      position=1
-    }
+// var position = 1;
+// setInterval(function(){
+//     if(position>3){
+//       position=1
+//     }
+//     document.getElementById('radio'+position).checked = true;
+//     console.log(position)
+//     position++;
 
-},4000);
+// },5500);
 </script>
 
 <template>
@@ -21,16 +22,16 @@ setInterval(function(){
       <input type="radio" name="radio-btn" id="radio3">
       <!-- Imagenes -->
       <div class="slide first">
-        <img src="@/assets/img/a1.jpg" alt="">
+        <img src="@/assets/img/a1.webp" alt="">
       </div>
       <div class="slide">
-        <img src="@/assets/img/a2.jpg" alt="">
+        <img src="@/assets/img/a2.webp" alt="">
       </div>
       <div class="slide">
-        <img src="@/assets/img/a3.jpg" alt="">
+        <img src="@/assets/img/a3.webp" alt="">
       </div>
 
-      <!-- Nvegacion automatica -->
+      <!-- Navegacion automatica -->
       <div class="navigation-auto ">
         <div class="auto-btn1"></div>
         <div class="auto-btn2"></div>
@@ -43,6 +44,8 @@ setInterval(function(){
       <label for="radio2" class="manual-btn"></label>
       <label for="radio3" class="manual-btn"></label>
     </div>
+
+    
   </div>
 </template>
 

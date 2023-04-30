@@ -1,5 +1,5 @@
 <template>
-    <footer class="mx-auto w-full bottom-0 relative">
+    <footer class="mx-auto w-full relative bottom-0 -mt-[200px] ">
     <div style="height: 300px; overflow: hidden;">
       <svg viewBox="0 -100 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
 
