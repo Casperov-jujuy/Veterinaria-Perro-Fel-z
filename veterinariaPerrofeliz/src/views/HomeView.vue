@@ -1,12 +1,11 @@
 <script setup>
 import clients from '@/components/clients.vue'
-import doctores from '@/components/doctores.vue'
+import opiniones from '@/components/opiniones.vue'
 </script>
 
 <template>
-  <div class="pt-2">
+  <div class="pt-2 max-w-7xl">
     <clients />
-    <doctores />
-    
+    <opiniones />    
   </div>
 </template>
