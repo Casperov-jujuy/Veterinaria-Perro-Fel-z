@@ -49,8 +49,7 @@
       </div>
     </div>
     <div class="bottom-0 w-full text-center bg-[#0E6064] py-2 text-gray-200">
-      <div class="max-w-7xl mx-auto space-y-4 md:space-y-0 md:inline-flex justify-between w-full">
-        <p>Aviso Legal Política de Privacidad Política de Cookies Ajustes de Cookies</p>
+      <div class="max-w-7xl mx-auto space-y-4 md:space-y-0 justify-between w-full">
         <p>Altos Juniors Software Services, S.A. 2023 - Todos los derechos reservados</p>
       </div>
     </div>

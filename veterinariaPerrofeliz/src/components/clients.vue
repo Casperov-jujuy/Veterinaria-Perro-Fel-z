@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <div class="slider mx-auto hidden max-w-7xl">
+  <div class="slider mx-auto max-w-7xl">
     <div class="slides">
       <!-- Botoncitos -->
       <input type="radio" name="radio-btn" id="radio1">

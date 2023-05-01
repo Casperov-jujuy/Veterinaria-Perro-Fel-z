@@ -13,14 +13,14 @@ import 'animate.css';
 
 <template>
   <div class="font-[Rubik] h-screen">
-  <header class="mx-auto">
+  <header class="mx-auto bg-white">
     <navbar />
   </header>
 
   <RouterView v-slot="{ Component }">
     <Transition enter-active-class="animate__animated animate__fadeInUp"
       leave-active-class="animate__animated animate__fadeOutDown" mode="out-in">
-      <component :is="Component" class="max-w-7xl mx-auto" />
+      <component :is="Component" class="mx-auto" />
     </Transition>
   </RouterView>
   <componentFooter class="z-[-10] transition duration-300" />

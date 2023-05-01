@@ -1,7 +1,7 @@
 <template>
   <!-- ESTE NAVBAR NO ES MIO -> CREDITOS A https://github.com/frontendfunn/vuejs-navbar-component/blob/main/src/components/Navbar.vue -->
-  <div class="md:py-2 max-w-7xl mx-auto">
-    <div class="flex justify-between mx-4 md:px-0">
+  <div class="py-2 max-w-7xl mx-auto">
+    <div class="inline-flex justify-between w-full">
       <div class="space-x-3 my-auto">
         <a href="#" class="text-gray-700 hover:text-blue-700 transition duration-300">
           <i class="fa-brands fa-facebook h-6"></i>
@@ -13,59 +13,64 @@
           <i class="fa-brands fa-whatsapp h-6"></i>
         </a>
       </div>
-      <div class="md:flex space-x-2">
-        <p class="text-gray-500 text-lg my-auto">turnos@PerroFeliz.com </p>
-        <p class="text-gray-500 text-lg my-auto hidden md:flex"> | </p>
-        <p class="text-gray-500 text-lg my-auto text-center"> +543886547141 </p>
-      </div>
+      <p class="text-gray-500 text-lg  my-auto"> turnos@PerroFeliz.com | +543886547141</p>
     </div>
   </div>
-  <div class="border-y-2 h-[85px] mx-auto">
+  <div class="border-y-2 h-[85px] pt-2">
     <div class="max-w-7xl mx-auto my-auto">
-      <div class="text-gray-500 text-xl space-x-1 w-full h-[85px] md:inline-flex flex justify-between px-4 md:pb-0 md:px-0">
-        <a @click="navigateToHome(0)" href="#"><img alt="Vue logo" class="logo pt-2" src="@/assets/img/veterinaria.webp"
+      <div class="text-gray-500 text-xl px-4 space-x-1 inline-flex w-full justify-between">
+        <a @click="navigateToHome(0)" href="#"><img alt="Vue logo" class="logo" src="@/assets/img/veterinaria.webp"
             width="170" height="125" />
         </a>
-        <!-- MENU RESPONSIVE -->
-        <div class="md:hidden my-auto mr-0">
-          <button id="menu" @click="menu()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 fill-gray-700"
-              viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-            </svg>
-          </button>
+        <button @click="showMenu = !showMenu" class="lg:hidden hover:scale-110 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 my-auto fill-gray-600"
+            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+          </svg>
+        </button>
+        <!-- BARRA DE NAVEGACIÓN PANTALLAS GRANDES -->
+        <div class="hidden lg:block">
+          <ul class="my-auto menu">
+            <div class="menu-indicator" :style="{ left: positionToMove, width: sliderWidth }"></div>
+            <li class="menu-item" v-for="link in links" :key="link.id" @click="sliderIndicator(link.id, 0)"
+              :ref="'menu-item_' + link.id">
+              <RouterLink v-slot="{ route }" :to="`${link.to}`" class="menu-link" active-class=""
+                :class="link.id === selectedIndex ? 'active' : null">
+                <span>{{ link.text }}</span>
+              </RouterLink>
+            </li>
+          </ul>
         </div>
-
-        <!-- ESTE ES LA LISTA CON LOS LINKS -->
-            <div class="md:flex">
-              <ul class="my-auto md:menu bg-white  md:flex opacity-0 md:opacity-100 top-[60px] left-[-600px] md:left-[0px] md:top-[0px] z-50 md:z-10 transition ease-in-out duration-300" id="lista">
-                <div class="menu-indicator hidden md:flex" :style="{ left: positionToMove, width: sliderWidth }"></div>
-
-                <li class="md:inline-flex" v-for="link in links" :key="link.id" @click="sliderIndicator(link.id, 0)"
-                  :ref="'menu-item_' + link.id">
-                  <RouterLink v-slot="{ route }" :to="`${link.to}`" @click="menuClick" class="menu-link" active-class=""
-                    :class="link.id === selectedIndex ? 'active' : null">
-                    <span>{{ link.text }}</span>
-                  </RouterLink>
-                </li>
-              </ul>
-            </div>
       </div>
     </div>
+    <!-- BARRA DE NAVEGACIÓN PARA MOVILES -->
+    <transition name="bounce">
+      <div v-if="showMenu" class="absolute border-t-2 w-full bg-white z-[2000] text-center space-y-4 shadow-xl">
+        <ul class="my-auto mx-auto w-full py-6">
+          <li class="py-6" v-for="link in links" :key="link.id">
+            <RouterLink v-slot="{ route }" :to="`${link.to}`" @click="showMenu = !showMenu" class="text-2xl text-gray-600"
+              active-class="font-bold text-[#208875] border-b-4 border-[#208875]"
+              :class="link.id === selectedIndex ? 'active' : null">
+              <span>{{ link.text }}</span>
+            </RouterLink>
+          </li>
+        </ul>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
 import { Motion, Presence } from "motion/vue";
-import { ref } from 'vue';
 import { useRoute } from 'vue-router';
-import router from '@/router'
+import router from '@/router';
+import { ref } from 'vue';
 export default {
 
   data() {
     return {
-      showMenu: ref(true),
+      showMenu: ref(false),
       sliderPosition: 0,
       selectedElementWidth: 0,
       selectedIndex: 0,
@@ -78,7 +83,7 @@ export default {
         {
           id: 2,
           to: "/about",
-          text: "ACERCA DE",
+          text: "NOSOTROS",
         },
         {
           id: 3,
@@ -99,21 +104,9 @@ export default {
     };
   },
   mounted() {
-    this.navigateToHome(7)
+    this.navigateToHome(6)
   },
   methods: {
-    menu() {
-      let list = document.querySelector('#lista');
-      list.classList.toggle('left-[-600px]')
-      list.classList.toggle('opacity-0')
-      list.classList.toggle('opacity-100')
-    },
-    menuClick() {
-      let list = document.querySelector('#lista');
-      list.classList.add('opacity-0')
-      list.classList.remove('opacity-100')
-      list.classList.add('left-[-600px]')
-    },
     navigateToHome(desp) {
       router.push('/')
       this.sliderIndicator(1, desp)
@@ -149,15 +142,22 @@ export default {
   padding-top: 19px;
   padding-bottom: 26px;
   position: relative;
+  display: inline-flex;
   list-style-type: none;
   overflow: hidden;
   margin-bottom: -16px;
+}
+
+/* li */
+.menu-item {
+  display: inline-flex;
 }
 
 /* a */
 .menu-link {
   padding-left: 1rem;
   padding-right: 1rem;
+  display: inline-flex;
   align-items: center;
   color: var(--link-text-color);
   text-decoration: none;
@@ -179,5 +179,22 @@ export default {
   left: 0;
   width: 3rem;
   transition: all ease 0.5s;
+}
+/* ANIMACION PARA LA NAVBAR DE VERSION MOVIL */
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 </style>

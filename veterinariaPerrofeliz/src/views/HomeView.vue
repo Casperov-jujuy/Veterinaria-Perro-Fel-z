@@ -4,7 +4,7 @@ import opiniones from '@/components/opiniones.vue'
 </script>
 
 <template>
-  <div class="pt-2">
+  <div class="pt-2 max-w-7xl">
     <clients />
     <opiniones />    
   </div>

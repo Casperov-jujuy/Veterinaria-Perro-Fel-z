@@ -1,12 +1,12 @@
 <template>
     <div class="testimonial-1 pb-6">
-        <div class="pt-10 text-gray-600 space-y-3 pb-10 px-4">
-            <p class="text-3xl font-bold">Nuestros clientes</p>
+        <div class="pt-10 text-gray-600 space-y-3 pb-10 px-6">
+            <p class="text-3xl font-bold text-teal-700">Nuestros clientes</p>
             <p class="text-2xl font-light">Contamos con una innumerable cantidad de opiniones y comentarios positivos
-                por parte de nuestros clientes.
+                por parte de nuestros clientes que avalan nuestros servicios.
             </p>
         </div>
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-6">
             <div class="md:flex md:flex-wrap md:-mx-4 mb-4">
 
                 <div class="md:w-1/2 md:px-4 mt-6 md:mt-0 hover:scale-105 transition duration-300">
