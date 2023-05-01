@@ -203,7 +203,7 @@ const show4 = ref(false)
     </Motion>
   </Presence>
 
-  <img src="@/assets/img/about.png" class="relative rounded-2xl" alt="">
+  <img src="@/assets/img/about.webp" class="relative rounded-2xl" alt="">
   <br>
 </template>
   

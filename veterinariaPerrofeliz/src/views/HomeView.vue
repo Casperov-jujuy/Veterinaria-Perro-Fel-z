@@ -6,9 +6,6 @@ import opiniones from '@/components/opiniones.vue'
 <template>
   <div class="pt-2">
     <clients />
-    <doctores />
-
-    <opiniones />
-    
+    <opiniones />    
   </div>
 </template>
