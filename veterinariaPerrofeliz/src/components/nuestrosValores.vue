@@ -84,7 +84,7 @@ onUnmounted(() => {
     </button>
   </div>
 
-  <img src="@/assets/img/logo.png" class="px-24 md:px-48 lg:px-72 xl:hidden" alt="">
+  <img src="@/assets/img/logo1.webp" class="px-24 md:px-48 lg:px-72 xl:hidden" alt="">
 
   <!-- VENTANAS MODALES -->
   <div class="space-y-2 xl:space-y-0 xl:my-0 mx-2 xl:mx-0">
