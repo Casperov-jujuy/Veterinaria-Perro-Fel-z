@@ -1,17 +1,34 @@
 <script setup>
 import { Motion, Presence } from "motion/vue";
-import { ref } from 'vue';
-const show = ref(false)
-const show1 = ref(false)
-const show2 = ref(false)
-const show3 = ref(false)
-const show4 = ref(false)
+import { ref, onMounted, onUnmounted } from 'vue';
+const show = ref()
+const show1 = ref()
+const show2 = ref()
+const show3 = ref()
+const show4 = ref()
+
+const handleResize = () => {
+  show.value = window.innerWidth < 1280; 
+  show1.value = window.innerWidth < 1280; 
+  show2.value = window.innerWidth < 1280; 
+  show3.value = window.innerWidth < 1280; 
+  show4.value = window.innerWidth < 1280; 
+};
+
+onMounted(() => {
+  handleResize();
+  window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
+});
+
 </script>
 
 <template>
-  <div class="max-w-7xl pt-4 px-2 relative">
-    <img src="@/assets/img/about.webp" class="rounded-2xl" alt="">
-    <button @click="show = !show" class="ml-[39.3%] sm:ml-[39%] md:ml-[40%] lg:ml-[41.4%] mt-[-14%] sm:mt-[-15%] md:mt-[-14%] scale-50 sm:scale-75 md:scale-100 absolute z-40 transition ease-in-out duration-300">
+  <div class="max-w-7xl pt-4 hidden xl:block">
+    <button @click="show = !show" class="ml-[544px] mt-[535px] absolute z-40 transition ease-in-out duration-300">
       <button
         class="py-2 px-4 h-14 w-14 bg-[#446BE1] hover:scale-125 transition duration-300 text-white rounded-full absolute z-20">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 absolute mt-[11px] ml-[12px] left-0 top-0 fill-white"
@@ -67,46 +84,54 @@ const show4 = ref(false)
     </button>
   </div>
 
+  <img src="@/assets/img/logo.png" class="px-24 md:px-48 lg:px-72 xl:hidden" alt="">
+
   <!-- VENTANAS MODALES -->
+  <div class="space-y-2 xl:space-y-0 xl:my-0 mx-2 xl:mx-0">
   <Presence>
-    <Motion v-if="show" class="box bg-blue-600 absolute mx-auto text-white z-50 max-w-7xl max-h-[720px] overflow-hidden"
+    <Motion v-if="show4" class="box bg-[#F35D6D] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
       :initial="{ opacity: 0, y: 50 }" :animate="{
           opacity: 1,
           y: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, y: 50 }">
-      <button class="text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl" @click="show = !show">
+      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+        @click="show4 = !show4">
         <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
       </button>
-      <div class="grid grid-cols-2">
-        <div class="col-span-1 bg-white h-[720px]">
-          <img src="@/assets/img/aboutalt.webp" class="overflow-hidden object-cover h-full" alt="">
+      <div class="grid grid-cols-1 xl:grid-cols-2">
+        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
+          <img src="@/assets/img/about3.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
-        <div class="col-span-1 px-16 pt-48 h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-4xl">QUIÉNES SOMOS</p>
+        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0 xl:h-[720px]">
+          <p class="font-bold font-[Rubik] py-4 text-4xl">UNA IDEA, UN EMPRENDIMIENTO</p>
           <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-2xl pt-4 font-[Rubik] font-light">Perro Feliz es una cadena de veterinarias en crecimiento que
-            proporciona el cuidado necesario para la buena salud de sus mascotas, diseñado
-            para los propietarios de perros siempre activos. </p>
+          <p class="text-2xl pt-4 font-[Rubik] font-light">Gerardo Moreno fundó Perro Feliz tras el regreso de uno de sus
+            viajes en el
+            que su mascota necesitó atención veterinaria urgente. Y dado el estricto horario de atención de las
+            veterinarias de la región, decidió abrir su propia veterinaria enfocada en el bienestar animal, aplicando sus
+            conocimientos como ingeniero. Dichos conocimientos también le permitieron crear el módulo sanitario para
+            facilitar la atención a sus clientes. </p>
         </div>
       </div>
     </Motion>
   </Presence>
   <Presence>
-    <Motion v-if="show1" class="box bg-[#7BBD64] absolute mx-auto text-white z-50" :initial="{ opacity: 0, x: 50 }"
+    <Motion v-if="show1" class="box bg-[#7BBD64] px-4 xl:px-0 xl:absolute mx-auto text-white z-50" :initial="{ opacity: 0, x: 50 }"
       :animate="{
           opacity: 1,
           x: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, x: -50 }">
-      <button class="text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl" @click="show1 = !show1">
+      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+        @click="show1 = !show1">
         <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
       </button>
-      <div class="grid grid-cols-2">
-        <div class="col-span-1 bg-white h-[720px]">
+      <div class="grid grid-cols-1 xl:grid-cols-2">
+        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
           <img src="@/assets/img/about2.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
-        <div class="col-span-1 px-16 pt-48 h-[720px]">
+        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
           <p class="font-bold font-[Rubik] py-4 text-4xl">NUESTRA FILOSOFÍA</p>
           <div class="h-[2px] w-full bg-white"></div>
           <p class="text-2xl pt-4 font-[Rubik] font-light">Nos comprometemos con la educación continua y el
@@ -118,20 +143,21 @@ const show4 = ref(false)
     </Motion>
   </Presence>
   <Presence>
-    <Motion v-if="show2" class="box bg-[#F69F45] absolute mx-auto text-white z-50" :initial="{ opacity: 0, x: 50 }"
+    <Motion v-if="show2" class="box bg-[#F69F45] px-4 xl:px-0 xl:absolute mx-auto text-white z-50" :initial="{ opacity: 0, x: 50 }"
       :animate="{
           opacity: 1,
           x: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, x: -50 }">
-      <button class="text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl" @click="show2 = !show2">
+      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+        @click="show2 = !show2">
         <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
       </button>
-      <div class="grid grid-cols-2">
-        <div class="col-span-1 bg-white h-[720px]">
+      <div class="grid grid-cols-1 xl:grid-cols-2">
+        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
           <img src="@/assets/img/about1.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
-        <div class="col-span-1 px-16 pt-48 h-[720px]">
+        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
           <p class="font-bold font-[Rubik] py-4 text-4xl">NUESTRA MISIÓN</p>
           <div class="h-[2px] w-full bg-white"></div>
           <p class="text-2xl pt-4 font-[Rubik] font-light">Nuestra misión es brindar servicios veterinarios de alta
@@ -143,25 +169,52 @@ const show4 = ref(false)
     </Motion>
   </Presence>
   <Presence>
-    <Motion v-if="show3" class="box bg-[#F1172F] absolute mx-auto text-white z-50" :initial="{ opacity: 0, y: 50 }"
+    <Motion v-if="show"
+      class="box bg-blue-600 px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
+      :initial="{ opacity: 0, y: 50 }" :animate="{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 0.1 }
+        }" :exit="{ opacity: 0, y: 50 }">
+      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+        @click="show = !show">
+        <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
+      </button>
+      <div class="grid grid-cols-1 xl:grid-cols-2">
+        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
+          <img src="@/assets/img/aboutalt.webp" class="overflow-hidden object-cover h-full" alt="">
+        </div>
+        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
+          <p class="font-bold font-[Rubik] py-4 text-4xl">QUIÉNES SOMOS</p>
+          <div class="h-[2px] w-full bg-white"></div>
+          <p class="text-2xl pt-4 font-[Rubik] font-light">Perro Feliz es una cadena de veterinarias en crecimiento que
+            proporciona el cuidado necesario para la buena salud de sus mascotas, diseñado
+            para los propietarios de perros siempre activos. </p>
+        </div>
+      </div>
+    </Motion>
+  </Presence>
+  <Presence>
+    <Motion v-if="show3" class="box bg-[#F1172F] px-4 xl:px-0 xl:absolute mx-auto text-white z-50" :initial="{ opacity: 0, y: 50 }"
       :animate="{
           opacity: 1,
           y: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, y: 50 }">
-      <button class="text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl" @click="show3 = !show3">
+      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+        @click="show3 = !show3">
         <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
       </button>
-      <div class="grid grid-cols-2">
-        <div class="col-span-1 bg-white h-[720px]">
+      <div class="grid grid-cols-1 xl:grid-cols-2">
+        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
           <img src="@/assets/img/about5.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
-        <div class="col-span-1 px-16 pt-16 h-[720px]">
+        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-16 pb-8 xl:pb-0 xl:h-[720px]">
           <p class="font-bold font-[Rubik] py-4 text-4xl">NUESTRA VISIÓN</p>
           <div class="h-[2px] w-full bg-white"></div>
           <p class="text-xl pt-4 font-[Rubik] font-light">
             Dentro de los objetivos a largo plazo de Perro Feliz tenemos:
-          <ul class="list-disc list-outside ml-5 py-2">
+          <ul class="list-disc list-outside ml-5 py-2 text-xl">
             <li>Expandirnos para ofrecer a nuestros clientes una nueva forma de atención especializada y de alta
               tecnología a
               nuestros queridos caninos.</li>
@@ -178,42 +231,28 @@ const show4 = ref(false)
       </div>
     </Motion>
   </Presence>
-  <Presence>
-    <Motion v-if="show4" class="box bg-[#F35D6D] absolute mx-auto text-white z-50" :initial="{ opacity: 0, y: 50 }"
-      :animate="{
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.1 }
-        }" :exit="{ opacity: 0, y: 50 }">
-      <button class="text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl" @click="show4 = !show4">
-        <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
-      </button>
-      <div class="grid grid-cols-2">
-        <div class="col-span-1 bg-white h-[720px]">
-          <img src="@/assets/img/about3.webp" class="overflow-hidden object-cover h-full" alt="">
-        </div>
-        <div class="col-span-1 px-16 pt-28 h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-4xl">UNA IDEA, UN EMPRENDIMIENTO</p>
-          <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-2xl pt-4 font-[Rubik] font-light">Gerardo Moreno fundó Perro Feliz tras el regreso de uno de sus viajes en el
-            que su mascota necesitó atención veterinaria urgente. Y dado el estricto horario de atención de las
-            veterinarias de la región, decidió abrir su propia veterinaria enfocada en el bienestar animal, aplicando sus
-            conocimientos como ingeniero. Dichos conocimientos también le permitió crear el módulo sanitario para facilitar la atención a sus clientes. </p>
-        </div>
-      </div>
-    </Motion>
-  </Presence>
+</div>
 
-  
+  <img src="@/assets/img/about.png" class="relative rounded-2xl hidden xl:block" alt="">
   <br>
 </template>
   
 <style scoped>
-.box {
-  border-radius: 5px;
-  max-width: 80rem;
-  width: 100%;
-  height: 720px
+@media (max-width: 3000px) {
+  .box {
+    border-radius: 5px;
+    max-width: 80rem;
+    width: 100%;
+    height: 720px
+  }
+}
+@media (max-width: 1280px) {
+  .box {
+    border-radius:5px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 25px;
+  }
 }
 
 img {
