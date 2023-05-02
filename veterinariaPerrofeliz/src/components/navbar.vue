@@ -1,19 +1,19 @@
 <template>
   <!-- ESTE NAVBAR NO ES MIO -> CREDITOS A https://github.com/frontendfunn/vuejs-navbar-component/blob/main/src/components/Navbar.vue -->
-  <div class="py-2 max-w-7xl mx-auto">
-    <div class="inline-flex justify-between w-full">
+  <div class="md:py-2 max-w-7xl mx-auto">
+    <div class="inline-flex justify-between w-full px-4">
       <div class="space-x-3 my-auto">
         <a href="#" class="text-gray-700 hover:text-blue-700 transition duration-300">
-          <i class="fa-brands fa-facebook h-6"></i>
+          <i class="fa-brands fa-facebook h-4 md:h-6"></i>
         </a>
         <a href="#" class="text-gray-700 hover:text-rose-700 transition duration-300">
-          <i class="fa-brands fa-instagram h-6"></i>
+          <i class="fa-brands fa-instagram h-4 md:h-6"></i>
         </a>
         <a href="#" class="text-gray-700 hover:text-green-700 transition duration-300">
-          <i class="fa-brands fa-whatsapp h-6"></i>
+          <i class="fa-brands fa-whatsapp h-4 md:h-6"></i>
         </a>
       </div>
-      <p class="text-gray-500 text-lg  my-auto"> turnos@PerroFeliz.com | +543886547141</p>
+      <p class="text-gray-500 md:text-lg text-[12px] my-auto "> turnos@PerroFeliz.com | +543886547141</p>
     </div>
   </div>
   <div class="border-y-2 h-[85px] pt-2">

@@ -9,8 +9,9 @@ const show4 = ref(false)
 </script>
 
 <template>
-  <div class="max-w-7xl pt-4">
-    <button @click="show = !show" class="ml-[544px] mt-[535px] absolute z-40 transition ease-in-out duration-300">
+  <div class="max-w-7xl pt-4 px-2 relative">
+    <img src="@/assets/img/about.webp" class="rounded-2xl" alt="">
+    <button @click="show = !show" class="ml-[39.3%] sm:ml-[39%] md:ml-[40%] lg:ml-[41.4%] mt-[-14%] sm:mt-[-15%] md:mt-[-14%] scale-50 sm:scale-75 md:scale-100 absolute z-40 transition ease-in-out duration-300">
       <button
         class="py-2 px-4 h-14 w-14 bg-[#446BE1] hover:scale-125 transition duration-300 text-white rounded-full absolute z-20">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 absolute mt-[11px] ml-[12px] left-0 top-0 fill-white"
@@ -203,7 +204,7 @@ const show4 = ref(false)
     </Motion>
   </Presence>
 
-  <img src="@/assets/img/about.webp" class="relative rounded-2xl" alt="">
+  
   <br>
 </template>
   
