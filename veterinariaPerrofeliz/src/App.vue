@@ -13,9 +13,17 @@ import 'animate.css';
 
 <template>
   <div class="font-[Rubik] h-screen">
-  <header class="mx-auto bg-white">
-    <navbar />
-  </header>
+    <header class="z-[100] relative bg-white">
+      <Presence>
+        <Motion class="" :initial="{ opacity: 0, y: -50 }" :animate="{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.1,duration:1.75 }
+          }" :exit="{ opacity: 0, y: 50 }">
+          <navbar />
+        </Motion>
+      </Presence>
+    </header>
 
   <RouterView v-slot="{ Component }">
     <Transition enter-active-class="animate__animated animate__fadeInUp"
