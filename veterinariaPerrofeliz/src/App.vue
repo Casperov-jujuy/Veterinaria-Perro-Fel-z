@@ -18,7 +18,7 @@ import 'animate.css';
         <Motion class="" :initial="{ opacity: 0, y: -50 }" :animate="{
             opacity: 1,
             y: 0,
-            transition: { delay: 0.1,duration:1.75 }
+            transition: { delay: 0.1,duration:1.5 }
           }" :exit="{ opacity: 0, y: 50 }">
           <navbar />
         </Motion>
