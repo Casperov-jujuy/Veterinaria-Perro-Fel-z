@@ -1,16 +1,16 @@
 <template>
   <div class="space-y-3 py-2">
     <div class="title-line lg:mx-80">
-      <p class="text-3xl font-bold text-center text-teal-700 py-4">¡Bienvenido a Perro Feliz!</p>
+      <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-4">¡Bienvenido a Perro Feliz!</p>
     </div>
-    <p class="text-2xl font-light text-gray-600 px-4 pb-4 md:text-center">Sitio web oficial de la cadena de veterinarias líder en nuestra región.</p>
+    <p class="text-xl md:text-2xl font-light text-gray-600 px-4 pb-4 md:text-center">Sitio web oficial de la cadena de veterinarias líder en nuestra región.</p>
   </div>
   <swiper :modules="modules" :slides-per-view="1" :space-between="25" navigation :pagination="{ clickable: true }"
     @swiper="onSwiper" @slideChange="onSlideChange" :autoplay="{
         delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
-      }" class="cursor-grab rounded-md px-10 lg:h-[650px] mr-48">
+      }" class="cursor-grab rounded-md mx-4">
     <swiper-slide><img src="@/assets/img/a1.webp" alt=""></swiper-slide>
     <swiper-slide><img src="@/assets/img/a2.webp" alt=""></swiper-slide>
     <swiper-slide><img src="@/assets/img/a3.webp" alt=""></swiper-slide>

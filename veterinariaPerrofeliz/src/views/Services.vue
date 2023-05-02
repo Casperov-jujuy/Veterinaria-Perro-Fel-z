@@ -11,7 +11,7 @@ import imagen6 from '@/assets/img/service6.webp';
     <div class="w-full">
         <span class="">
             <div class="title-line lg:mx-80">
-                <p class="text-3xl font-bold text-center text-teal-700 py-10">Nuestros Servicios</p>
+                <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-10">Nuestros Servicios</p>
             </div>
             <div class=" w-100 pb-6">
                 <div v-for="(servicio, index) in servicios" :key="index" class="grid md:grid-cols-2">

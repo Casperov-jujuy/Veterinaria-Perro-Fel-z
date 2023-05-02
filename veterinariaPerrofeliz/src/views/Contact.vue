@@ -6,13 +6,13 @@
         <div
             class="w-full max-w-7xl mx-auto border-4 border-[#208875] mt-8 mb-10 pt-4 lg:pt-10 pb-8 lg:mx-0 lg:pb-10 text-gray-600 overflow-hidden z-50">
             <img src="@/assets/img/contact.png" class="mx-auto h-52 lg:pt-8" alt="">
-            <p class="text-3xl font-bold pt-2 px-10 text-center">Contáctanos</p>
-            <p class="text-2xl font-light px-4 lg:px-28 py-2">Somos un hospital de animales pequeños y grandes de servicio
+            <p class="text-2xl md:text-3xl font-bold pt-2 px-10 text-center">Contáctanos</p>
+            <p class="text-xl md:text-2xl font-light px-4 lg:px-28 py-2">Somos un hospital de animales pequeños y grandes de servicio
                 completo
                 comprometido a brindar la
                 mejor atención veterinaria para las mascotas. No dude en ponerse en contacto con nosotros por cualquier
                 inconveniente.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-24 mx-auto mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:px-24 mx-auto mt-10">
                 <div class="col-span-1 mx-auto inline-flex space-x-6">
                     <div class="bg-[#446BE1] rounded-full h-10 w-10">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 mt-2 m-auto fill-white"

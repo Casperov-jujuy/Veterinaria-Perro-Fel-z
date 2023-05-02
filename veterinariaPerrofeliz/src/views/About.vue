@@ -4,7 +4,7 @@ import nuestrosValores from '@/components/nuestrosValores.vue'
 <template>
     <div class="max-w-7xl">
         <div class="title-line lg:mx-80 pt-8 pb-4">
-            <p class="text-3xl font-bold text-center text-teal-700">Conocénos</p>
+            <p class="text-2xl md:text-3xl font-bold text-center text-teal-700">Conocénos</p>
         </div>
         <nuestrosValores />
     </div>

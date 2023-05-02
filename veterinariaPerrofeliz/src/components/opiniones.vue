@@ -1,8 +1,8 @@
 <template>
     <div class="testimonial-1 pb-6">
         <div class="pt-10 text-gray-600 space-y-3 pb-10 px-6">
-            <p class="text-3xl font-bold text-teal-700">Nuestros clientes</p>
-            <p class="text-2xl font-light">Contamos con una innumerable cantidad de opiniones y comentarios positivos
+            <p class="text-2xl md:text-3xl font-bold text-teal-700">Nuestros clientes</p>
+            <p class="text-xl md:text-2xl font-light">Contamos con una innumerable cantidad de opiniones y comentarios positivos
                 por parte de nuestros clientes que avalan nuestros servicios.
             </p>
         </div>

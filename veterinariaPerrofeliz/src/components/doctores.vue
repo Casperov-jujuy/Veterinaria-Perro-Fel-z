@@ -2,9 +2,9 @@
     <div class="max-w-7xl mx-auto px-6 md:px-6">
         <div class="space-y-3 py-2">
             <div class="title-line lg:mx-80">
-                <p class="text-3xl font-bold text-center text-teal-700 py-4">Nuestro Equipo</p>
+                <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-4">Nuestro Equipo</p>
             </div>
-            <p class="text-2xl font-light text-gray-600">Nos enfocamos en la prevención, impulsando los mejores hábitos para su bienestar
+            <p class="text-xl md:text-2xl font-light text-gray-600">Nos enfocamos en la prevención, impulsando los mejores hábitos para su bienestar
                 general. Para ello contamos con
                 profesionales veterinarios experimentados que no dejan de capacitarse día a día para brindarles a vos y a tu
                 mascota
