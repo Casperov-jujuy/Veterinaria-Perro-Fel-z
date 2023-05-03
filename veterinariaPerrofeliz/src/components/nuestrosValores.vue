@@ -104,9 +104,9 @@ onUnmounted(() => {
           <img src="@/assets/img/about3.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
         <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-4xl">UNA IDEA, UN EMPRENDIMIENTO</p>
+          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">UNA IDEA, UN EMPRENDIMIENTO</p>
           <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-2xl pt-4 font-[Rubik] font-light">Gerardo Moreno fundó Perro Feliz tras el regreso de uno de sus
+          <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Gerardo Moreno fundó Perro Feliz tras el regreso de uno de sus
             viajes en el
             que su mascota necesitó atención veterinaria urgente. Y dado el estricto horario de atención de las
             veterinarias de la región, decidió abrir su propia veterinaria enfocada en el bienestar animal, aplicando sus
@@ -132,9 +132,9 @@ onUnmounted(() => {
           <img src="@/assets/img/about2.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
         <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-4xl">NUESTRA FILOSOFÍA</p>
+          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA FILOSOFÍA</p>
           <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-2xl pt-4 font-[Rubik] font-light">Nos comprometemos con la educación continua y el
+          <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Nos comprometemos con la educación continua y el
             perfeccionamiento de técnicas y
             conocimientos, para ofrecer siempre una atención médica calificada y de calidad a nuestros clientes.
           </p>
@@ -158,9 +158,9 @@ onUnmounted(() => {
           <img src="@/assets/img/about1.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
         <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-4xl">NUESTRA MISIÓN</p>
+          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA MISIÓN</p>
           <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-2xl pt-4 font-[Rubik] font-light">Nuestra misión es brindar servicios veterinarios de alta
+          <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Nuestra misión es brindar servicios veterinarios de alta
             calidad. Nos enfocamos en la prevención, diagnóstico y tratamiento de enfermedades en las mascotas, con el
             objetivo de prolongar su vida y mejorar su bienestar.
           </p>
@@ -185,9 +185,9 @@ onUnmounted(() => {
           <img src="@/assets/img/aboutalt.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
         <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-4xl">QUIÉNES SOMOS</p>
+          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">QUIÉNES SOMOS</p>
           <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-2xl pt-4 font-[Rubik] font-light">Perro Feliz es una cadena de veterinarias en crecimiento que
+          <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Perro Feliz es una cadena de veterinarias en crecimiento que
             proporciona el cuidado necesario para la buena salud de sus mascotas, diseñado
             para los propietarios de perros siempre activos. </p>
         </div>
@@ -210,7 +210,7 @@ onUnmounted(() => {
           <img src="@/assets/img/about5.webp" class="overflow-hidden object-cover h-full" alt="">
         </div>
         <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-16 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-4xl">NUESTRA VISIÓN</p>
+          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA VISIÓN</p>
           <div class="h-[2px] w-full bg-white"></div>
           <p class="text-xl pt-4 font-[Rubik] font-light">
             Dentro de los objetivos a largo plazo de Perro Feliz tenemos:
