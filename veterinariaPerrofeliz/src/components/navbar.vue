@@ -19,7 +19,7 @@
   <div class="border-y-2 h-[85px] pt-2">
     <div class="max-w-7xl mx-auto my-auto">
       <div class="text-gray-500 text-xl px-4 space-x-1 inline-flex w-full justify-between">
-        <a @click="navigateToHome(0)" href="#"><img alt="Vue logo" class="logo" src="@/assets/img/veterinaria.webp"
+        <a @click="navigateToHome('/',1,0)" href="#"><img alt="Vue logo" class="logo" src="@/assets/img/veterinaria.webp"
             width="170" height="125" />
         </a>
         <button @click="showMenu = !showMenu" class="lg:hidden hover:scale-110 transition duration-300">
@@ -104,12 +104,12 @@ export default {
     };
   },
   mounted() {
-    this.navigateToHome(6)
+    this.navigateToHome('/',1,6)
   },
   methods: {
-    navigateToHome(desp) {
-      router.push('/')
-      this.sliderIndicator(1, desp)
+    navigateToHome(url,id,desp) {
+      router.push(url)
+      this.sliderIndicator(id, desp)
     },
     sliderIndicator(id, add) {
       let el = this.$refs[`menu-item_${id}`][0];
