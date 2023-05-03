@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 import router from '@/router';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { Motion, Presence } from "motion/vue";
 import navbar from './components/navbar.vue'
 // import componentFooter from './components/componentFooter.vue'
@@ -24,10 +24,24 @@ function closeModal() {
 function openModal() {
   isOpenM.value = true
 }
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+const mostrarGoTop = ref(false);
+window.onscroll = () => {
+  if (document.documentElement.scrollTop > 100) {
+    mostrarGoTop.value = true;
+  } else {
+    mostrarGoTop.value = false;
+  }
+}
+
 </script>
 
 <template>
   <div class="font-[Rubik] h-screen">
+    <!-- NAVBAR -->
     <header class="z-[100] relative bg-white">
       <Presence>
         <Motion class="" :initial="{ opacity: 0, y: -50 }" :animate="{
@@ -40,12 +54,35 @@ function openModal() {
       </Presence>
     </header>
 
+    <!-- BOTON GO BACK TOP -->
+    <div
+      class="fixed right-[1rem] bottom-[3rem] md:right-[4rem] md:bottom-[4rem] w-[3.6rem] h-[3.6rem] z-[100]">
+      <Presence>
+        <Motion v-show="mostrarGoTop" :initial="{ opacity: 0, y: -50 }" :animate="{
+            opacity: 1, y: 0,
+            transition: { delay: 0.1, duration: 1.5 }
+          }" :exit="{ opacity: 0, y: 50 }">
+          <button @click="scrollToTop">
+            <div class="py-4 px-[19px] mx-auto bg-teal-700 rounded-full cursor-pointer animate-pulse">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-[1.7rem] fill-white"
+                viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+              </svg>
+            </div>
+          </button>
+        </Motion>
+      </Presence>
+    </div>
+
+    <!-- ACÁ SE RENDERIZA LAS RUTAS -->
     <RouterView v-slot="{ Component }">
       <Transition enter-active-class="animate__animated animate__fadeInUp"
         leave-active-class="animate__animated animate__fadeOutDown" mode="out-in">
         <component :is="Component" class="mx-auto" />
       </Transition>
     </RouterView>
+
 
     <!-- ACÁ EMPIEZA EL FOOTER: PODRIA HABER SIDO UN COMPONENTE COMO SE VE ABAJO
        PERO LA DE COMUNICACION ENTRE COMPONENTES TE LA DEBO (tambien por razones de tiempo) -->
@@ -61,37 +98,30 @@ function openModal() {
       </div>
       <div class="bg-[#92E0E4] w-full">
 
-        <!-- No sé cuál es la forma correcta de usar metodos de otro componente pero yo lo hice asi: -->
+        <!-- No sé cuál es la forma correcta de hacer uso de metodos de otro componente pero yo lo hice asi: -->
         <!-- Puse ref="algo" en el componente navbar y luego puedo invocar sus metodos con this.$refs.algo.METODO() -->
         <div class="">
           <div
             class="max-w-7xl w-full pt-4 md:pt-0 mx-auto px-12 sm:px-24 grid grid-cols-2 md:grid-cols-5 md:px-24 gap-4 md:gap-10 justify-between text-[#535353] pb-5">
             <div class="col-span-1 md:col-span-2 lg:col-span-1">
               <p class="leading-7 md:leading-10 md:text-xl w-full"><span class="font-bold">Nosotros</span><br>
-                <a href="#" @click="this.$refs.navbarComponent.sliderIndicator(2, 0);
-                router.push('/about');">
+                <button @click="this.$refs.navbarComponent.navigateToHome('/about', 2, 0); scrollToTop();">
+
                   Sobre Nosotros
-                </a><br>
-                <a href="#" @click="
-                  this.$refs.navbarComponent.sliderIndicator(5, 0);
-                  router.push('/contact');
-                ">Sucursales</a><br>
-                <a href="#" @click="
-                  this.$refs.navbarComponent.sliderIndicator(5, 0);
-                  router.push('/contact');
-                ">Contacto</a><br>
+                </button><br>
+
+                <button
+                  @click=" this.$refs.navbarComponent.navigateToHome('/contact', 5, 0); scrollToTop(); ">Contacto</button><br>
               </p>
             </div>
             <div class="col-span-1 sm:col-span-2 lg:col-span-1">
               <p class="leading-7 md:leading-10 md:text-xl col-span-1"><span class="font-bold">Asistencia</span><br>
-                <a href="#" @click="
-                  this.$refs.navbarComponent.sliderIndicator(3, 0);
-                  router.push('/services');
-                ">Servicios</a><br>
-                <a href="#" @click="
-                  this.$refs.navbarComponent.sliderIndicator(4, 0);
-                  router.push('/doctors');
-                ">Especialidades</a><br>
+                <button
+                  @click=" this.$refs.navbarComponent.navigateToHome('/services', 3, 0); scrollToTop(); ">Servicios</button><br>
+                <button
+                  @click=" this.$refs.navbarComponent.navigateToHome('/contact', 5, 0); scrollToTop(); ">Sucursales</button><br>
+                <button
+                  @click=" this.$refs.navbarComponent.navigateToHome('/doctors', 4, 0); scrollToTop(); ">Especialidades</button><br>
 
               </p>
             </div>
