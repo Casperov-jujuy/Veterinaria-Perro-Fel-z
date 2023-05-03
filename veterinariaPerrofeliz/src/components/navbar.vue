@@ -19,8 +19,8 @@
   <div class="border-y-2 h-[85px] pt-2">
     <div class="max-w-7xl mx-auto my-auto">
       <div class="text-gray-500 text-xl px-4 space-x-1 inline-flex w-full justify-between">
-        <a @click="navigateToHome('/',1,0)" href="#"><img alt="Vue logo" class="logo" src="@/assets/img/veterinaria.webp"
-            width="170" height="125" />
+        <a @click="navigateToHome('/', 1, 0)" href="#"><img alt="Vue logo" class="logo"
+            src="@/assets/img/veterinaria.webp" width="170" height="125" />
         </a>
         <button @click="showMenu = !showMenu" class="lg:hidden hover:scale-110 transition duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 my-auto fill-gray-600"
@@ -65,10 +65,10 @@
 import { Motion, Presence } from "motion/vue";
 import { useRoute } from 'vue-router';
 import router from '@/router';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 export default {
-
   data() {
+    const route = useRoute()
     return {
       showMenu: ref(false),
       sliderPosition: 0,
@@ -99,15 +99,26 @@ export default {
           id: 5,
           to: "/contact",
           text: "CONTACTO",
+        },
+        {
+          id: 6,
+          to: "/homework",
+          text: "📚✨",
         }
       ],
     };
   },
   mounted() {
-    this.navigateToHome('/',1,6)
+    window.addEventListener('popstate', this.handleBackButton)
+    this.navigate('/', 1, 6)
   },
   methods: {
-    navigateToHome(url,id,desp) {
+    handleBackButton() {      
+      // Aquí puedes hacer algo cuando el usuario hace clic en el botón "Atrás"
+      console.log('El usuario hizo clic en el botón "Atrás"');
+      this.sliderIndicator(this.$route.meta.id,0);
+    },
+    navigate(url, id, desp) {
       router.push(url)
       this.sliderIndicator(id, desp)
     },
@@ -117,6 +128,9 @@ export default {
       this.selectedElementWidth = el.offsetWidth;
       this.selectedIndex = id;
     },
+  },
+  beforeUnmount() {
+    window.removeEventListener('popstate', this.handleBackButton)
   },
   computed: {
     positionToMove() {
@@ -180,18 +194,22 @@ export default {
   width: 3rem;
   transition: all ease 0.5s;
 }
+
 /* ANIMACION PARA LA NAVBAR DE VERSION MOVIL */
 .bounce-enter-active {
   animation: bounce-in .5s;
 }
+
 .bounce-leave-active {
   animation: bounce-in .5s reverse;
 }
+
 @keyframes bounce-in {
   0% {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
