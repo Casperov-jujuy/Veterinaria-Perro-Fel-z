@@ -8,11 +8,11 @@ const show3 = ref()
 const show4 = ref()
 
 const handleResize = () => {
-  show.value = window.innerWidth < 1280; 
-  show1.value = window.innerWidth < 1280; 
-  show2.value = window.innerWidth < 1280; 
-  show3.value = window.innerWidth < 1280; 
-  show4.value = window.innerWidth < 1280; 
+  show.value = window.innerWidth < 1280;
+  show1.value = window.innerWidth < 1280;
+  show2.value = window.innerWidth < 1280;
+  show3.value = window.innerWidth < 1280;
+  show4.value = window.innerWidth < 1280;
 };
 
 onMounted(() => {
@@ -88,150 +88,179 @@ onUnmounted(() => {
 
   <!-- VENTANAS MODALES -->
   <div class="space-y-2 xl:space-y-0 xl:my-0 mx-2 xl:mx-0">
-  <Presence>
-    <Motion v-if="show4" class="box bg-[#F35D6D] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
-      :initial="{ opacity: 0, y: 50 }" :animate="{
+    <Presence>
+      <Motion v-if="show4" class="box bg-[#F35D6D] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
+        :initial="{ opacity: 0, y: 50 }" :animate="{
           opacity: 1,
           y: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, y: 50 }">
-      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
-        @click="show4 = !show4">
-        <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
-      </button>
-      <div class="grid grid-cols-1 xl:grid-cols-2">
-        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
-          <img src="@/assets/img/about3.webp" class="overflow-hidden object-cover h-full" alt="">
+        <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+          @click="show4 = !show4">
+          <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
+        </button>
+        <div class="grid grid-cols-1 xl:grid-cols-3">
+          <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
+            <img src="@/assets/img/about3.webp" class="overflow-hidden object-cover h-full" alt="">
+          </div>
+          <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-20 pb-8 xl:pb-0 xl:h-[720px]">
+            <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">UNA IDEA, UN EMPRENDIMIENTO</p>
+            <div class="h-[2px] w-full bg-white"></div>
+            <p class="text-xl pt-4 font-[Rubik] font-light">Gerardo Moreno es un amante de los animales desde siempre,
+              pero fue su perro Bombón quien cambió su vida para siempre. Un día, Bombón sufrió una infección en sus
+              encías debido a las astillas de un mueble de la casa, por lo que Gerardo comenzó a buscar una veterinaria
+              para llevarlo de urgencia. Sin embargo, al llegar cinco minutos tarde a la clínica debido al tráfico, se
+              encontró con la gélida mirada de la recepcionista que le informó que ya habían cerrado y que no volverían a
+              abrir hasta el día lunes.
+            </p>
+            <p class="text-xl font-[Rubik] font-light">Desesperado, Gerardo comenzó a buscar alternativas y fue entonces
+              cuando se dio cuenta de la falta de
+              veterinarias que ofrecieran un servicio de calidad y que se preocupan realmente por la salud y el bienestar
+              de los animales. Fue entonces cuando decidió tomar una decisión que cambiaría su vida para siempre.
+
+            </p>
+            <p class="text-xl font-[Rubik] font-light">Decidió que quería crear una veterinaria diferente, que se
+              preocupara realmente por los animales y que
+              ofreciera un servicio excepcional. Así nació Perro Feliz, una veterinaria que tenía como objetivo principal
+              cuidar de la salud y el bienestar de las mascotas.
+            </p>
+          </div>
         </div>
-        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">UNA IDEA, UN EMPRENDIMIENTO</p>
-          <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Gerardo Moreno fundó Perro Feliz tras el regreso de uno de sus
-            viajes en el
-            que su mascota necesitó atención veterinaria urgente. Y dado el estricto horario de atención de las
-            veterinarias de la región, decidió abrir su propia veterinaria enfocada en el bienestar animal, aplicando sus
-            conocimientos como ingeniero. Dichos conocimientos también le permitieron crear el módulo sanitario para
-            facilitar la atención a sus clientes. </p>
-        </div>
-      </div>
-    </Motion>
-  </Presence>
-  <Presence>
-    <Motion v-if="show1" class="box bg-[#7BBD64] px-4 xl:px-0 xl:absolute mx-auto text-white z-50" :initial="{ opacity: 0, x: 50 }"
-      :animate="{
+      </Motion>
+    </Presence>
+    <Presence>
+      <Motion v-if="show1" class="box bg-[#7BBD64] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
+        :initial="{ opacity: 0, x: 50 }" :animate="{
           opacity: 1,
           x: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, x: -50 }">
-      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
-        @click="show1 = !show1">
-        <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
-      </button>
-      <div class="grid grid-cols-1 xl:grid-cols-2">
-        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
-          <img src="@/assets/img/about2.webp" class="overflow-hidden object-cover h-full" alt="">
+        <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+          @click="show1 = !show1">
+          <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
+        </button>
+        <div class="grid grid-cols-1 xl:grid-cols-3">
+          <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
+            <img src="@/assets/img/about2.webp" class="overflow-hidden object-cover h-full" alt="">
+          </div>
+          <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-12 pb-8 xl:pb-0 xl:h-[720px]">
+            <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA FILOSOFÍA</p>
+            <div class="h-[2px] w-full bg-white"></div>
+            <p class="text-xl pt-4 font-[Rubik] font-light">Nos comprometemos con la educación continua y el
+              perfeccionamiento de técnicas y
+              conocimientos, para ofrecer siempre una atención médica calificada y de calidad a nuestros clientes.
+            </p>
+            <p class="text-xl font-[Rubik] font-light">
+              Nuestros Valores son:
+            <ul class="list-disc list-outside ml-5 py-1 text-xl">
+              <li>Compromiso: Nos comprometemos en ofrecerte el mejor servicio posible, enfocado en el bienestar y cuidado
+                de tus mascotas.</li>
+              <li>Responsabilidad: Nos preocupamos por el bienestar de tus mascotas y de la comunidad, por lo que nos
+                esforzamos por ofrecer servicios de calidad y un trato ético y responsable.</li>
+              <li>Honestidad: Creemos en la honestidad y la transparencia en todos los procesos y servicios ofrecidos.
+                Siempre te informaremos de los servicios que se van a realizar en tus mascotas, los costos y los tiempos
+                de espera.</li>
+              <li>Innovación: Nos comprometemos en estar siempre a la vanguardia en tecnología y en la actualización de
+                los tratamientos y procedimientos médicos para ofrecer un servicio de calidad superior.</li>
+              <li>Pasión: Nuestro equipo está formado por personas apasionadas por los animales, lo que se refleja en el
+                trato y cuidado que se les da a cada uno de ellos.</li>
+            </ul>
+            </p>
+          </div>
         </div>
-        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA FILOSOFÍA</p>
-          <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Nos comprometemos con la educación continua y el
-            perfeccionamiento de técnicas y
-            conocimientos, para ofrecer siempre una atención médica calificada y de calidad a nuestros clientes.
-          </p>
-        </div>
-      </div>
-    </Motion>
-  </Presence>
-  <Presence>
-    <Motion v-if="show2" class="box bg-[#F69F45] px-4 xl:px-0 xl:absolute mx-auto text-white z-50" :initial="{ opacity: 0, x: 50 }"
-      :animate="{
+      </Motion>
+    </Presence>
+    <Presence>
+      <Motion v-if="show2" class="box bg-[#F69F45] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
+        :initial="{ opacity: 0, x: 50 }" :animate="{
           opacity: 1,
           x: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, x: -50 }">
-      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
-        @click="show2 = !show2">
-        <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
-      </button>
-      <div class="grid grid-cols-1 xl:grid-cols-2">
-        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
-          <img src="@/assets/img/about1.webp" class="overflow-hidden object-cover h-full" alt="">
+        <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+          @click="show2 = !show2">
+          <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
+        </button>
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
+            <img src="@/assets/img/about1.webp" class="overflow-hidden object-cover h-full" alt="">
+          </div>
+          <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
+            <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA MISIÓN</p>
+            <div class="h-[2px] w-full bg-white"></div>
+            <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Nuestra misión es brindar servicios veterinarios
+              de alta
+              calidad. Nos enfocamos en la prevención, diagnóstico y tratamiento de enfermedades en las mascotas, con el
+              objetivo de prolongar su vida y mejorar su bienestar.
+            </p>
+          </div>
         </div>
-        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA MISIÓN</p>
-          <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Nuestra misión es brindar servicios veterinarios de alta
-            calidad. Nos enfocamos en la prevención, diagnóstico y tratamiento de enfermedades en las mascotas, con el
-            objetivo de prolongar su vida y mejorar su bienestar.
-          </p>
-        </div>
-      </div>
-    </Motion>
-  </Presence>
-  <Presence>
-    <Motion v-if="show"
-      class="box bg-blue-600 px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
-      :initial="{ opacity: 0, y: 50 }" :animate="{
+      </Motion>
+    </Presence>
+    <Presence>
+      <Motion v-if="show" class="box bg-blue-600 px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
+        :initial="{ opacity: 0, y: 50 }" :animate="{
           opacity: 1,
           y: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, y: 50 }">
-      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
-        @click="show = !show">
-        <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
-      </button>
-      <div class="grid grid-cols-1 xl:grid-cols-2">
-        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
-          <img src="@/assets/img/aboutalt.webp" class="overflow-hidden object-cover h-full" alt="">
+        <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+          @click="show = !show">
+          <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
+        </button>
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
+            <img src="@/assets/img/aboutalt.webp" class="overflow-hidden object-cover h-full" alt="">
+          </div>
+          <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
+            <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">QUIÉNES SOMOS</p>
+            <div class="h-[2px] w-full bg-white"></div>
+            <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Perro Feliz es una cadena de veterinarias en
+              crecimiento que
+              proporciona el cuidado necesario para la buena salud de sus mascotas, diseñado
+              para los propietarios de perros siempre activos. </p>
+          </div>
         </div>
-        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-48 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">QUIÉNES SOMOS</p>
-          <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">Perro Feliz es una cadena de veterinarias en crecimiento que
-            proporciona el cuidado necesario para la buena salud de sus mascotas, diseñado
-            para los propietarios de perros siempre activos. </p>
-        </div>
-      </div>
-    </Motion>
-  </Presence>
-  <Presence>
-    <Motion v-if="show3" class="box bg-[#F1172F] px-4 xl:px-0 xl:absolute mx-auto text-white z-50" :initial="{ opacity: 0, y: 50 }"
-      :animate="{
+      </Motion>
+    </Presence>
+    <Presence>
+      <Motion v-if="show3" class="box bg-[#F1172F] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
+        :initial="{ opacity: 0, y: 50 }" :animate="{
           opacity: 1,
           y: 0,
           transition: { delay: 0.1 }
         }" :exit="{ opacity: 0, y: 50 }">
-      <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
-        @click="show3 = !show3">
-        <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
-      </button>
-      <div class="grid grid-cols-1 xl:grid-cols-2">
-        <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
-          <img src="@/assets/img/about5.webp" class="overflow-hidden object-cover h-full" alt="">
+        <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+          @click="show3 = !show3">
+          <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
+        </button>
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <div class="col-span-1 bg-white h-[300px] md:h-[500px] xl:h-[720px] order-last xl:order-first">
+            <img src="@/assets/img/about5.webp" class="overflow-hidden object-cover h-full" alt="">
+          </div>
+          <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-16 pb-8 xl:pb-0 xl:h-[720px]">
+            <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA VISIÓN</p>
+            <div class="h-[2px] w-full bg-white"></div>
+            <p class="text-xl pt-4 font-[Rubik] font-light">
+              Dentro de los objetivos a largo plazo de Perro Feliz tenemos:
+            <ul class="list-disc list-outside ml-5 py-2 text-xl">
+              <li>Expandirnos para ofrecer a nuestros clientes una nueva forma de atención especializada y de alta
+                tecnología a
+                nuestros queridos caninos.</li>
+              <li>Ser la veterinaria líder en ofrecer servicios de salud preventiva y tratamiento de enfermedades en
+                animales,
+                trabajando en colaboración con nuestros clientes para lograr una vida saludable para sus mascotas.</li>
+              <li>Implementar un sistema de consultas virtuales para abarcar todas las distintas zonas de la provincia a
+                través
+                de una aplicación móvil, que permita reuniones a distancia y consultoría.</li>
+              <li>Expandir nuestros servicios para incluir la atención médica a animales exóticos.</li>
+            </ul>
+            </p>
+          </div>
         </div>
-        <div class="col-span-1 px-4 xl:px-16 pt-6 xl:pt-16 pb-8 xl:pb-0 xl:h-[720px]">
-          <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">NUESTRA VISIÓN</p>
-          <div class="h-[2px] w-full bg-white"></div>
-          <p class="text-xl pt-4 font-[Rubik] font-light">
-            Dentro de los objetivos a largo plazo de Perro Feliz tenemos:
-          <ul class="list-disc list-outside ml-5 py-2 text-xl">
-            <li>Expandirnos para ofrecer a nuestros clientes una nueva forma de atención especializada y de alta
-              tecnología a
-              nuestros queridos caninos.</li>
-            <li>Ser la veterinaria líder en ofrecer servicios de salud preventiva y tratamiento de enfermedades en
-              animales,
-              trabajando en colaboración con nuestros clientes para lograr una vida saludable para sus mascotas.</li>
-            <li>Implementar un sistema de consultas virtuales para abarcar todas las distintas zonas de la provincia a
-              través
-              de una aplicación móvil, que permita reuniones a distancia y consultoría.</li>
-            <li>Expandir nuestros servicios para incluir la atención médica a animales exóticos.</li>
-          </ul>
-          </p>
-        </div>
-      </div>
-    </Motion>
-  </Presence>
-</div>
+      </Motion>
+    </Presence>
+  </div>
 
   <img src="@/assets/img/about.png" class="relative rounded-2xl hidden xl:block" alt="">
   <br>
@@ -246,9 +275,10 @@ onUnmounted(() => {
     height: 720px
   }
 }
+
 @media (max-width: 1280px) {
   .box {
-    border-radius:5px;
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     padding-bottom: 25px;
