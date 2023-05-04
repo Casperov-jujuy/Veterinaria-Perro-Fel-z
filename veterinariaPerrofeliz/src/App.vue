@@ -105,23 +105,23 @@ window.onscroll = () => {
             class="max-w-7xl w-full pt-4 md:pt-0 mx-auto px-12 sm:px-24 grid grid-cols-2 md:grid-cols-5 md:px-24 gap-4 md:gap-10 justify-between text-[#535353] pb-5">
             <div class="col-span-1 md:col-span-2 lg:col-span-1">
               <p class="leading-7 md:leading-10 md:text-xl w-full"><span class="font-bold">Nosotros</span><br>
-                <button @click="this.$refs.navbarComponent.navigate('/about', 2, 0); scrollToTop();">
+                <button @click="$refs.navbarComponent.navigate('/about', 2, 0); scrollToTop();">
 
                   Sobre Nosotros
                 </button><br>
 
                 <button
-                  @click=" this.$refs.navbarComponent.navigate('/contact', 5, 0); scrollToTop(); ">Contacto</button><br>
+                  @click="$refs.navbarComponent.navigate('/contact', 5, 0); scrollToTop(); ">Contacto</button><br>
               </p>
             </div>
             <div class="col-span-1 sm:col-span-2 lg:col-span-1">
               <p class="leading-7 md:leading-10 md:text-xl col-span-1"><span class="font-bold">Asistencia</span><br>
                 <button
-                  @click=" this.$refs.navbarComponent.navigate('/services', 3, 0); scrollToTop(); ">Servicios</button><br>
+                  @click="$refs.navbarComponent.navigate('/services', 3, 0); scrollToTop(); ">Servicios</button><br>
                 <button
-                  @click=" this.$refs.navbarComponent.navigate('/contact', 5, 0); scrollToTop(); ">Sucursales</button><br>
+                  @click="$refs.navbarComponent.navigate('/contact', 5, 0); scrollToTop(); ">Sucursales</button><br>
                 <button
-                  @click=" this.$refs.navbarComponent.navigate('/doctors', 4, 0); scrollToTop(); ">Especialidades</button><br>
+                  @click="$refs.navbarComponent.navigate('/doctors', 4, 0); scrollToTop(); ">Especialidades</button><br>
 
               </p>
             </div>

@@ -44,34 +44,199 @@
         </div>
 
         <div class="title-line lg:mx-80 ">
-            <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-10">Consigna Nº5</p>
+            <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-10">Consigna Nº5 - Indicadores</p>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-            
+
+        <div class="px-4">
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 ">
+                <span class="underline"> Indicador relacionado con los CLIENTES:</span>
+                Lograr satisfacción y lealtad del cliente
+            </p>
+            <!-- TITULO SUBRAYADO Y PARRAFO -->
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline"> Descripción:</span>
+            </p>
+            <p class="text-xl md:text-2xl font-light text-gray-600">La satisfacción y lealtad sólo pueden lograrse si el
+                cliente tiene una buena imagen
+                de la veterinaria, imagen relacionada a los servicios que ofrece. Si el cliente está
+                satisfecho y es leal a la veterinaria, volverá siempre en lugar de concurrir a otras.
+            </p>
+            <!-- TITULO SUBRAYADO Y PARRAFO -->
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline"> Objetivos estratégicos precedentes:</span>
+            </p>
+            <p class="text-xl md:text-2xl font-light text-gray-600">Mejorar imagen y conocimiento de la veterinaria.
+            </p>
+            <!-- TITULO SUBRAYADO Y PARRAFO -->
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Indicadores para el objetivo “Lograr la satisfacción y lealtad del
+                    cliente”:</span>
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-teal-700 pb-2">
+                Nivel de satisfacción del cliente:
+
+            </p>
+            <p class="text-xl md:text-2xl font-light text-gray-600">
+                <span class="font-bold text-teal-700"> Descripción:</span>
+                Permite evaluar el nivel de satisfacción percibido por los clientes con respecto a
+                la veterinaria. Este indicador se obtiene a través de encuestas efectuadas a los
+                clientes que visitan la veterinaria. Se efectuarán, en principio, 90 encuestas: tres
+                encuestas por día, una en cada turno. En la encuesta se solicitará al cliente que
+                responda su grado de satisfacción con la empresa, de 1 a 3, siendo 1 satisfecho,
+                2 indiferente y 3 insatisfecho. Se espera que los resultados de tipo 1 (satisfecho)
+                sean altos y vayan en aumento a lo largo del tiempo, en detrimento de las
+                respuestas de tipo 2 (indiferente) y 3 (insatisfecho).
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Fórmula:</span>
+            </p>
+            <img src="@/assets/img/t1.png" class="mx-auto md:h-14" alt="">
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Variables</span>
+            </p>
+            <ul class="list-decimal list-outside ml-14 py-2 text-xl md:text-2xl font-light text-gray-600">
+                <li>Cantidad de respuestas de un tipo: Se toma la cantidad de encuestas que
+                    poseen la respuesta que se desea analizar.
+                </li>
+                <li>Cantidad de encuestas efectuadas: Se toma la cantidad total de encuestas
+                    efectuadas. En caso de haber podido cumplir con la cantidad planeada,
+                    este valor debería ser 90.</li>
+            </ul>
+            <!-- TITULOS NEGRITA Y TEXTO LIGHT -->
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Frecuencia de actualización:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600"> Mensual</span>
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Valor Meta:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600"> Valor presupuestado para respuesta de cada
+                    tipo.</span>
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Evaluación de desvíos:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600"> respecto al valor presupuestado y respecto al
+                    mes
+                    anterior, para respuestas de tipo 1 (satisfecho). Se tomarán valores porcentuales.</span>
+            </p>
+            <img src="@/assets/img/t2.png" class="mx-auto md:h-96 pb-4" alt="">
+
+            <p class="text-xl md:text-2xl font-bold text-teal-700">Nivel de lealtad del cliente:</p>
+            <p class="text-xl md:text-2xl font-bold text-teal-700 py-2">Descripción:</p>
+            <p class="text-xl md:text-2xl font-light text-gray-600">
+                Permite evaluar si los clientes son leales a volver, diferenciando entre aquellos
+                que visitan la veterinaria, la mayoría de las veces, sólo a veces o casi nunca. Este
+                indicador se obtiene a través de encuestas efectuadas a los clientes que visitan la
+                veterinaria. Se efectuarán, en principio, 90 encuestas: tres encuestas por día, una
+                en cada turno. En la encuesta se solicitará al cliente que responda, teniendo en
+                cuenta todas las veces que trae a su/s mascota/s para los distintos servicios que
+                ofrece la veterinaria, con qué frecuencia lo hace en esta sucursal, siendo 1
+                siempre, 2 la mayoría de las veces, 3 sólo a veces y 4 casi nunca. Se espera que
+                los resultados de tipo 1 (siempre) y 2 (la mayoría de las veces) sean altos y vayan
+                en aumento a lo largo del tiempo, en detrimento de las respuestas de tipo 3 (sólo
+                a veces) y 4 (casi nunca).
+                Esta pregunta no deberá ser respondida por clientes que visitan la veterinaria por
+                primera vez.</p>
+
+            <p class="text-xl md:text-2xl font-bold text-teal-700">Fórmula:</p>
+            <img src="@/assets/img/t3.png" class="mx-auto md:h-32" alt="">
+            <p class="text-xl md:text-2xl font-bold text-teal-700">Variables:</p>
+            <ul class="list-decimal list-outside ml-14 py-2 text-xl md:text-2xl font-light text-gray-600">
+                <li>Cantidad de respuestas de un tipo: Se toma la cantidad de encuestas que
+                    poseen la respuesta que se desea analizar.
+                </li>
+                <li>Cantidad de encuestas efectuadas: Se toma la cantidad total de encuestas
+                    efectuadas. En caso de haber podido cumplir con la cantidad planeada,
+                    este valor debería ser 90.</li>
+            </ul>
+
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Frecuencia de actualización:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600"> Mensual</span>
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Valor Meta:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600">Valor presupuestado para respuesta de cada
+                    tipo.</span>
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Evaluación de desvíos:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600">
+                    respecto a valor presupuestado y respecto a mes anterior,
+                    para respuestas de tipo 1 y 2 (siempre y la mayoría de las veces). Se tomarán valores
+                    porcentuales</span>
+            </p>
+
+            <img src="@/assets/img/t4.png" class="mx-auto md:h-96 pb-4" alt="">
+
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 pt-4">
+                <span class="underline"> Indicador relacionado con los PROCESOS:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600"> Adecuar instalaciones</span>
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline"> Descripción:</span>
+            </p>
+            <p class="text-xl md:text-2xl font-light text-gray-600">El contexto de negocios de las clínicas veterinarias
+                tampoco es ajeno al contexto
+                cambiante de la economía y los negocios en general. Dada la gran cantidad de
+                necesidades que se deben satisfacer, siempre será necesario adecuar las
+                instalaciones para poder hacerlo satisfactoriamente. Por ende, requiere de
+                actualizaciones y reformas continuas a fin de poder abastecer calidad y variedad
+                en los servicios y así poder mantener el nivel de ingresos. Por ello, y más aún en
+                este tipo de negocios, la adecuación de las instalaciones es un factor fundamental.
+                Por supuesto, se deberá efectuar una evaluación sobre los costos de la
+                adecuación y los beneficios de la misma y, según el resultado de esta evaluación,
+                decidir sobre la conveniencia de efectuarla.
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Objetivos estratégicos precedentes:</span>
+            </p>
+            <p class="text-xl md:text-2xl font-light text-gray-600">Adoptar tecnología y herramientas; asesoramiento
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Indicadores para el objetivo “Adecuar Instalaciones”:</span>
+            </p>
+            <p class="text-xl md:text-2xl font-light text-gray-600">Impacto de la inversión en adecuación
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="">Descripción:</span>
+            </p>
+            <p class="text-xl md:text-2xl font-light text-gray-600">Permite evaluar el posible impacto de la inversión
+                realizada para la adecuación de
+                las instalaciones, en pos de mejorar la calidad y la variedad de los servicios, en
+                los ingresos del periodo posterior a la inversión.</p>
+
+            <p class="text-xl md:text-2xl font-bold text-teal-700 pt-4">Fórmula:</p>
+            <img src="@/assets/img/t5.png" class="mx-auto md:h-10" alt="">
+            <p class="text-xl md:text-2xl font-bold text-teal-700">Variables:</p>
+            <ul class="list-decimal list-outside ml-14 py-2 text-xl md:text-2xl font-light text-gray-600">
+                <li>Inversión en la adecuación: se mide en pesos argentinos. Es toda aquella
+                    inversión destinada al mejoramiento de las instalaciones, en pos de mejorar
+                    los servicios como así también la calidad de los mismos, que se haya
+                    efectuado en el semestre anterior al semestre analizado.
+                </li>
+                <li>Ingresos: se mide en pesos argentinos. Se toman los ingresos del semestre
+                    actual (posterior al semestre en el que se efectuó la inversión).</li>
+            </ul>
+            <!-- TITULOS NEGRITA Y TEXTO LIGHT -->
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Frecuencia de actualización:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600"> Semestral</span>
+            </p> 
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Evaluación de desvíos:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600"> con respecto al semestre anterior y con respecto al
+                    presupuestado. Se tomarán valores porcentuales.</span>
+            </p>
+            <img src="@/assets/img/t6.png" class="mx-auto md:h-96 pb-4" alt="">
+        </div>
         <!-- MODALES -->
         <Presence>
-            <Motion v-if="show" class="max-w-7xl bg-[#e65454] top-[418px] sm:top-[425px] sm:h-[585px] absolute text-white z-50"
-                :initial="{ opacity: 0, scale: 0 }" :animate="{ opacity: 1, scale: 1,
-                    transition: { delay: 0.1,duration:0.75 } }" :exit="{ opacity: 0, scale: 0.6 }">
+            <Motion v-if="show"
+                class="max-w-7xl w-full bg-[#e65454] top-[418px] sm:top-[425px] sm:h-[585px] absolute text-white z-50"
+                :initial="{ opacity: 0, scale: 0 }" :animate="{
+                    opacity: 1, scale: 1,
+                    transition: { delay: 0.1, duration: 0.75 }
+                }" :exit="{ opacity: 0, scale: 0.6 }">
                 <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
                     @click="show = !show">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
@@ -80,23 +245,21 @@
                     <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0 xl:h-[720px]">
                         <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">FORTALEZAS</p>
                         <div class="h-[2px] w-full bg-white"></div>
-                        <p class="text-xl pt-4 font-[Rubik] font-light">
-                            Dentro de los objetivos a largo plazo de Perro Feliz tenemos:
-                        <ul class="list-disc list-outside ml-5 py-2 text-xl">
-                            <li>Expandirnos para ofrecer a nuestros clientes una nueva forma de atención especializada y
-                                de alta
-                                tecnología a
-                                nuestros queridos caninos.</li>
-                            <li>Ser la veterinaria líder en ofrecer servicios de salud preventiva y tratamiento de
-                                enfermedades en
-                                animales,
-                                trabajando en colaboración con nuestros clientes para lograr una vida saludable para sus
-                                mascotas.</li>
-                            <li>Implementar un sistema de consultas virtuales para abarcar todas las distintas zonas de
-                                la provincia a
-                                través
-                                de una aplicación móvil, que permita reuniones a distancia y consultoría.</li>
-                            <li>Expandir nuestros servicios para incluir la atención médica a animales exóticos.</li>
+                        <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">
+                        <ul class="list-disc list-outside ml-5 py-2 ">
+                            <li>Continua inversión en la actualización y adaptación para el confort en nuestras
+                                sucursales
+                            </li>
+                            <li>Buena llegada de nuestra imagen y oferta al público</li>
+                            <li>Equipo de profesionales abierto al debate sobre las nuevas problemáticas que se
+                                plantean.
+                            </li>
+                            <li>Servicio de bajo costo y buena calidad que se encuentre al alcance del cliente.</li>
+                            <li>Las sucursales ubicadas en lugares estratégicos(accesibilidad).</li>
+                            <li>Horarios de atención adecuados.</li>
+                            <li>Alta fidelización de los clientes.</li>
+                            <li>Mecanismo innovador en el traslado de las mascotas(sistema de contenedor de clientes).
+                            </li>
                         </ul>
                         </p>
                     </div>
@@ -104,34 +267,29 @@
             </Motion>
         </Presence>
         <Presence>
-            <Motion v-if="show1" class="max-w-7xl bg-[#19ab97] top-[418px] sm:top-[425px] sm:h-[585px] absolute text-white z-50"
-                :initial="{ opacity: 0, scale: 0 }" :animate="{ opacity: 1, scale: 1,
-                    transition: { delay: 0.1,duration:0.75 } }" :exit="{ opacity: 0, scale: 0.6 }">
+            <Motion v-if="show1"
+                class="max-w-7xl w-full bg-[#19ab97] top-[418px] sm:top-[425px] sm:h-[585px] absolute text-white z-50"
+                :initial="{ opacity: 0, scale: 0 }" :animate="{
+                    opacity: 1, scale: 1,
+                    transition: { delay: 0.1, duration: 0.75 }
+                }" :exit="{ opacity: 0, scale: 0.6 }">
                 <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
                     @click="show1 = !show1">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
                 </button>
-                <div class="grid grid-cols-1 xl:grid-cols-2">
-                    <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0 xl:h-[720px]">
+                <div class="grid grid-cols-1 xl:grid-cols-2 h-[600px] xl:h-[720px]">
+                    <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0 ">
                         <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">OPORTUNIDADES</p>
                         <div class="h-[2px] w-full bg-white"></div>
-                        <p class="text-xl pt-4 font-[Rubik] font-light">
-                            Dentro de los objetivos a largo plazo de Perro Feliz tenemos:
-                        <ul class="list-disc list-outside ml-5 py-2 text-xl">
-                            <li>Expandirnos para ofrecer a nuestros clientes una nueva forma de atención especializada y
-                                de alta
-                                tecnología a
-                                nuestros queridos caninos.</li>
-                            <li>Ser la veterinaria líder en ofrecer servicios de salud preventiva y tratamiento de
-                                enfermedades en
-                                animales,
-                                trabajando en colaboración con nuestros clientes para lograr una vida saludable para sus
-                                mascotas.</li>
-                            <li>Implementar un sistema de consultas virtuales para abarcar todas las distintas zonas de
-                                la provincia a
-                                través
-                                de una aplicación móvil, que permita reuniones a distancia y consultoría.</li>
-                            <li>Expandir nuestros servicios para incluir la atención médica a animales exóticos.</li>
+                        <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">
+                        <ul class="list-disc list-outside ml-5 py-2">
+                            <li>Mayor concienciación sobre la adopción y crianza responsable en la sociedad.</li>
+                            <li>Notorios avances de leyes en materia de los derechos de los animales en pro de la
+                                sanidad y
+                                de una tenencia responsable en el país.</li>
+                            <li>Nuevas generaciones de jóvenes con más sensibilidad hacia los animales.</li>
+                            <li>Tendencia creciente en cuanto a parejas o personas solas a tener una mascota.</li>
+                            <li>Mayor exigencia de calidad y conocimiento.</li>
                         </ul>
                         </p>
                     </div>
@@ -139,34 +297,28 @@
             </Motion>
         </Presence>
         <Presence>
-            <Motion v-if="show2" class="max-w-7xl bg-[#f8813c] top-[418px] sm:top-[425px] sm:h-[585px] absolute text-white z-50"
-                :initial="{ opacity: 0, scale: 0 }" :animate="{ opacity: 1, scale: 1,
-                    transition: { delay: 0.1,duration:0.75 } }" :exit="{ opacity: 0, scale: 0.6 }">
+            <Motion v-if="show2"
+                class="max-w-7xl w-full bg-[#f8813c] top-[418px] sm:top-[425px] sm:h-[585px] absolute text-white z-50"
+                :initial="{ opacity: 0, scale: 0 }" :animate="{
+                    opacity: 1, scale: 1,
+                    transition: { delay: 0.1, duration: 0.75 }
+                }" :exit="{ opacity: 0, scale: 0.6 }">
                 <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
                     @click="show2 = !show2">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
                 </button>
-                <div class="grid grid-cols-1 xl:grid-cols-2">
-                    <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0 xl:h-[720px]">
+                <div class="grid grid-cols-1 xl:grid-cols-2 h-[600px] xl:h-[720px]">
+                    <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0">
                         <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">DEBILIDADES</p>
                         <div class="h-[2px] w-full bg-white"></div>
-                        <p class="text-xl pt-4 font-[Rubik] font-light">
-                            Dentro de los objetivos a largo plazo de Perro Feliz tenemos:
-                        <ul class="list-disc list-outside ml-5 py-2 text-xl">
-                            <li>Expandirnos para ofrecer a nuestros clientes una nueva forma de atención especializada y
-                                de alta
-                                tecnología a
-                                nuestros queridos caninos.</li>
-                            <li>Ser la veterinaria líder en ofrecer servicios de salud preventiva y tratamiento de
-                                enfermedades en
-                                animales,
-                                trabajando en colaboración con nuestros clientes para lograr una vida saludable para sus
-                                mascotas.</li>
-                            <li>Implementar un sistema de consultas virtuales para abarcar todas las distintas zonas de
-                                la provincia a
-                                través
-                                de una aplicación móvil, que permita reuniones a distancia y consultoría.</li>
-                            <li>Expandir nuestros servicios para incluir la atención médica a animales exóticos.</li>
+                        <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">
+                        <ul class="list-disc list-outside ml-5 py-2">
+                            <li>Sistema informatico obsoleto.</li>
+                            <li>Limitación de responsabilidad (desligación de responsabilidades).</li>
+                            <li>Falta de una política de gestión de personal (Calendarización impredecible).</li>
+                            <li>Desempeño de las tareas son ineficientes y poco satisfactorias(formularios físicos de
+                                clientes mojados)</li>
+                            <li>Empleados cansados y desmotivados.</li>
                         </ul>
                         </p>
                     </div>
@@ -174,34 +326,27 @@
             </Motion>
         </Presence>
         <Presence>
-            <Motion v-if="show3" class="max-w-7xl bg-[#d24373] top-[418px] sm:top-[425px] sm:h-[585px] absolute text-white z-50"
-                :initial="{ opacity: 0, scale: 0 }" :animate="{ opacity: 1, scale: 1,
-                    transition: { delay: 0.1,duration:0.75 } }" :exit="{ opacity: 0, scale: 0.6 }">
+            <Motion v-if="show3"
+                class="max-w-7xl w-full bg-[#d24373] top-[418px] sm:top-[425px] sm:h-[585px] absolute text-white z-50"
+                :initial="{ opacity: 0, scale: 0 }" :animate="{
+                    opacity: 1, scale: 1,
+                    transition: { delay: 0.1, duration: 0.75 }
+                }" :exit="{ opacity: 0, scale: 0.6 }">
                 <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
                     @click="show3 = !show3">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
                 </button>
-                <div class="grid grid-cols-1 xl:grid-cols-2">
-                    <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0 xl:h-[720px]">
+                <div class="grid grid-cols-1 xl:grid-cols-2 h-[600px] xl:h-[720px]">
+                    <div class="col-span-2 px-4 xl:px-16 pt-6 xl:pt-28 pb-8 xl:pb-0">
                         <p class="font-bold font-[Rubik] py-4 text-2xl md:text-4xl">AMENAZAS</p>
                         <div class="h-[2px] w-full bg-white"></div>
-                        <p class="text-xl pt-4 font-[Rubik] font-light">
-                            Dentro de los objetivos a largo plazo de Perro Feliz tenemos:
-                        <ul class="list-disc list-outside ml-5 py-2 text-xl">
-                            <li>Expandirnos para ofrecer a nuestros clientes una nueva forma de atención especializada y
-                                de alta
-                                tecnología a
-                                nuestros queridos caninos.</li>
-                            <li>Ser la veterinaria líder en ofrecer servicios de salud preventiva y tratamiento de
-                                enfermedades en
-                                animales,
-                                trabajando en colaboración con nuestros clientes para lograr una vida saludable para sus
-                                mascotas.</li>
-                            <li>Implementar un sistema de consultas virtuales para abarcar todas las distintas zonas de
-                                la provincia a
-                                través
-                                de una aplicación móvil, que permita reuniones a distancia y consultoría.</li>
-                            <li>Expandir nuestros servicios para incluir la atención médica a animales exóticos.</li>
+                        <p class="text-xl md:text-2xl pt-4 font-[Rubik] font-light">
+                        <ul class="list-disc list-outside ml-5 py-2">
+                            <li>Exceso de oferta de servicios. </li>
+                            <li>La falta de educación sobre el cuidado de la salud animal.</li>
+                            <li>La emergencia de nuevas tecnologías y métodos en el cuidado de la salud animal.</li>
+                            <li>Poblaciones cada vez más pobres.</li>
+                            <li>Gran crecimiento demográfico que sobrepasa las proyecciones actuales.</li>
                         </ul>
                         </p>
                     </div>
