@@ -15,7 +15,7 @@
             Organización Empresarial y Modelos de Negocio. Grupo Altos Juniors G19.
         </p>
         <div class="title-line lg:mx-80 ">
-            <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-10">Consigna Nº3</p>
+            <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-10">Consigna Nº3 - FODA</p>
         </div>
         <div class="bg-gray-200 max-w-7xl flex justify-center py-48">
             <div class="circle scale-[2]">
