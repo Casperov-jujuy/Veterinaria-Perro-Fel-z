@@ -163,7 +163,7 @@ const show3 = ref(false)
             </p>
             <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
                 <span class="underline">Valor Meta:</span>
-                <span class="text-xl md:text-2xl font-light text-gray-600">Valor presupuestado para respuesta de cada
+                <span class="text-xl md:text-2xl font-light text-gray-600"> Valor presupuestado para respuesta de cada
                     tipo.</span>
             </p>
             <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
@@ -229,6 +229,10 @@ const show3 = ref(false)
             <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
                 <span class="underline">Frecuencia de actualización:</span>
                 <span class="text-xl md:text-2xl font-light text-gray-600"> Semestral</span>
+            </p>
+            <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
+                <span class="underline">Valor Meta:</span>
+                <span class="text-xl md:text-2xl font-light text-gray-600"> Valor presupuestado</span>
             </p>
             <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
                 <span class="underline">Evaluación de desvíos:</span>
