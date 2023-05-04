@@ -1,15 +1,23 @@
 <script setup>
-    import { Motion, Presence } from "motion/vue";
-    import { ref } from 'vue';
-    const show = ref(false)
-    const show1 = ref(false)
-    const show2 = ref(false)
-    const show3 = ref(false)
+import { Motion, Presence } from "motion/vue";
+import { ref } from 'vue';
+const show = ref(false)
+const show1 = ref(false)
+const show2 = ref(false)
+const show3 = ref(false)
 </script>
 <template>
     <div class="mx-auto w-full max-w-7xl">
         <div class="title-line lg:mx-80">
-            <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-10">Actividad Nº2 - Altos Juniors</p>
+            <p class="text-2xl md:text-3xl font-bold text-center text-teal-700 py-10 inline-flex">
+                Actividad Nº2 - Altos Juniors
+                <button class="flex" @click="$emit('modalGroup')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="my-auto hover:scale-150 transition duration-300 cursor-pointer pl-4 fill-yellow-600 hover:fill-yellow-500 h-10"
+                    viewBox="0 0 640 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3V245.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V389.2C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112h32c24 0 46.2 7.5 64.4 20.3zM448 416V394.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176h32c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2V416c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3V261.7c-10 11.3-16 26.1-16 42.3zm144-42.3v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2V448c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32V405.2c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112h32c61.9 0 112 50.1 112 112z" />
+                </svg></button>
+            </p>
         </div>
         <p class="text-xl md:text-2xl font-light text-gray-600 px-4">Desarrollo de la actividad Nº2 de la materia
             Organización Empresarial y Modelos de Negocio. Grupo Altos Juniors G19.
@@ -221,10 +229,11 @@
             <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
                 <span class="underline">Frecuencia de actualización:</span>
                 <span class="text-xl md:text-2xl font-light text-gray-600"> Semestral</span>
-            </p> 
+            </p>
             <p class="text-xl md:text-2xl font-bold text-left text-teal-700 py-4">
                 <span class="underline">Evaluación de desvíos:</span>
-                <span class="text-xl md:text-2xl font-light text-gray-600"> con respecto al semestre anterior y con respecto al
+                <span class="text-xl md:text-2xl font-light text-gray-600"> con respecto al semestre anterior y con respecto
+                    al
                     presupuestado. Se tomarán valores porcentuales.</span>
             </p>
             <img src="@/assets/img/t6.png" class="mx-auto md:h-96 pb-4" alt="">
@@ -237,8 +246,7 @@
                     opacity: 1, scale: 1,
                     transition: { delay: 0.1, duration: 0.75 }
                 }" :exit="{ opacity: 0, scale: 0.6 }">
-                <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
-                    @click="show = !show">
+                <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl" @click="show = !show">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
                 </button>
                 <div class="grid grid-cols-1 xl:grid-cols-2">
@@ -356,81 +364,80 @@
     </div>
 </template>
 <style>
-    .title-line {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.title-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .title-line::before,
-    .title-line::after {
-        content: "";
-        flex: 1;
-        border-bottom: 3px solid rgb(13 148 136);
-        margin: 0 1rem;
-    }
+.title-line::before,
+.title-line::after {
+    content: "";
+    flex: 1;
+    border-bottom: 3px solid rgb(13 148 136);
+    margin: 0 1rem;
+}
 
-    button {
-        border: none;
-        background: transparent;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        width: auto;
-        height: auto;
-        line-height: normal;
-        overflow: visible;
-        cursor: pointer;
+button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
 
-    }
+}
 
-    .circle {
-        position: relative;
-        width: 200px;
-        height: 200px;
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
 
-    }
+}
 
-    .quarter {
-        position: absolute;
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-    }
+.quarter {
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
 
-    .quarter.yellow {
-        background: #e65454;
-        clip: rect(0px, 100px, 100px, 0px);
-        width: 200px;
-    }
+.quarter.yellow {
+    background: #e65454;
+    clip: rect(0px, 100px, 100px, 0px);
+    width: 200px;
+}
 
-    .quarter.orange {
-        background: #19ab97;
-        clip: rect(0px, 200px, 100px, 100px);
-        width: 200px;
-    }
+.quarter.orange {
+    background: #19ab97;
+    clip: rect(0px, 200px, 100px, 100px);
+    width: 200px;
+}
 
-    .quarter.bordo {
-        background: #d24373;
-        clip: rect(100px, 200px, 200px, 100px);
-        width: 200px;
-    }
+.quarter.bordo {
+    background: #d24373;
+    clip: rect(100px, 200px, 200px, 100px);
+    width: 200px;
+}
 
-    .quarter.pink {
-        background: #f8813c;
-        clip: rect(100px, 100px, 200px, 0px);
-        width: 200px;
-    }
+.quarter.pink {
+    background: #f8813c;
+    clip: rect(100px, 100px, 200px, 0px);
+    width: 200px;
+}
 
-    .cut {
-        position: absolute;
-        top: 25%;
-        left: 25%;
-        width: 50%;
-        height: 50%;
-        background-color: white;
-        border-radius: 50%;
-        pointer-events: none;
+.cut {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
 
-    }
-</style>
+}</style>

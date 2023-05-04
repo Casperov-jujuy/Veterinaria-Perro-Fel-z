@@ -18,6 +18,10 @@ import {
 } from '@headlessui/vue';
 const isOpenM = ref(false)
 
+function modalGroup() {
+  isOpenM.value = true;
+}
+
 function closeModal() {
   isOpenM.value = false
 }
@@ -79,7 +83,7 @@ window.onscroll = () => {
     <RouterView v-slot="{ Component }">
       <Transition enter-active-class="animate__animated animate__fadeInUp"
         leave-active-class="animate__animated animate__fadeOutDown" mode="out-in">
-        <component :is="Component" class="mx-auto" />
+        <component :is="Component" @modalGroup="modalGroup" class="mx-auto" />
       </Transition>
     </RouterView>
 
