@@ -19,16 +19,20 @@
   <div class="border-y-2 h-[85px] pt-2">
     <div class="max-w-7xl mx-auto my-auto">
       <div class="text-gray-500 text-xl px-4 space-x-1 inline-flex w-full justify-between">
-        <a @click="navigate('/', 1, 0)" href="#"><img alt="Vue logo" class="logo"
-            src="@/assets/img/veterinaria.webp" width="170" height="125" />
+        <a @click="navigate('/', 1, 0)" href="#"><img alt="Vue logo" class="logo" src="@/assets/img/veterinaria.webp"
+            width="170" height="125" />
         </a>
-        <button @click="showMenu = !showMenu" class="lg:hidden hover:scale-110 transition duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 my-auto fill-gray-600"
-            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-            <path
-              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-          </svg>
-        </button>
+        <!-- <hamburguer @click="toggleMenu" class="px-4 py-2 h-[50px]">
+          
+          
+        </hamburguer> -->
+        <div @click="toggleMenu();" class="cursor-pointer lg:hidden pb-4 pr-4 transition duration-300">
+          <button ref="menutoggle" class="flex toggle w-full cursor-pointer pt-8 pr-10" >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
         <!-- BARRA DE NAVEGACIÓN PANTALLAS GRANDES -->
         <div class="hidden lg:block">
           <ul class="my-auto menu">
@@ -49,7 +53,7 @@
       <div v-if="showMenu" class="absolute border-t-2 w-full bg-white z-[2000] text-center space-y-4 shadow-xl">
         <ul class="my-auto mx-auto w-full py-6">
           <li class="py-6" v-for="link in links" :key="link.id">
-            <RouterLink v-slot="{ route }" :to="`${link.to}`" @click="showMenu = !showMenu" class="text-2xl text-gray-600"
+            <RouterLink v-slot="{ route }" :to="`${link.to}`" @click="toggleMenu()" class="text-2xl text-gray-600"
               active-class="font-bold text-[#208875] border-b-4 border-[#208875]"
               :class="link.id === selectedIndex ? 'active' : null">
               <span>{{ link.text }}</span>
@@ -113,10 +117,10 @@ export default {
     this.navigate('/', 1, 6)
   },
   methods: {
-    handleBackButton() {      
+    handleBackButton() {
       // Aquí puedes hacer algo cuando el usuario hace clic en el botón "Atrás"
       console.log('El usuario hizo clic en el botón "Atrás"');
-      this.sliderIndicator(this.$route.meta.id,0);
+      this.sliderIndicator(this.$route.meta.id, 0);
     },
     navigate(url, id, desp) {
       router.push(url)
@@ -128,6 +132,13 @@ export default {
       this.selectedElementWidth = el.offsetWidth;
       this.selectedIndex = id;
     },
+    saludar(){
+        alert('ola')
+    },
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+      this.$refs.menutoggle.classList.toggle('active');
+    }
   },
   beforeUnmount() {
     window.removeEventListener('popstate', this.handleBackButton)
@@ -215,4 +226,53 @@ export default {
     opacity: 1;
   }
 }
-</style>
+
+/* MENU HAMBURGUER */
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+}
+
+.toggle span {
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: rgb(15 118 110);
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.toggle span:nth-child(1) {
+  transform: translateY(-15px);
+  width: 35px;
+  left: 20px;
+}
+
+.toggle.active span:nth-child(1) {
+  width: 40px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125seg;
+}
+
+.toggle span:nth-child(2) {
+  transform: translateY(15px);
+  width: 20px;
+  left: 35px;
+}
+
+.toggle.active span:nth-child(2) {
+  width: 40px;
+  transform: translateY(0px) translateX(-14px) rotate(315deg);
+  transition-delay: 0.25seg;
+}
+
+.toggle span:nth-child(3) {
+  width: 30px;
+  left: 25px;
+}
+
+.toggle.active span:nth-child(3) {
+  transform: translateX(60px);
+}</style>
