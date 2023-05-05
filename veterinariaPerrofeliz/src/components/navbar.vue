@@ -26,7 +26,7 @@
           
           
         </hamburguer> -->
-        <div @click="toggleMenu();" class="cursor-pointer lg:hidden pb-4 pr-4 transition duration-300">
+        <div @click="toggleMenu();" class="cursor-pointer lg:hidden pb-4 pr-5 transition duration-300">
           <button ref="menutoggle" class="flex toggle w-full cursor-pointer pt-8 pr-10" >
             <span></span>
             <span></span>
