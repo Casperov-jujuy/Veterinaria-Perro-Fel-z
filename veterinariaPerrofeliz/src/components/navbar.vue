@@ -114,7 +114,7 @@ export default {
   },
   mounted() {
     window.addEventListener('popstate', this.handleBackButton)
-    this.navigate('/', 1, 6)
+    this.navigate('/', 1, 0)
   },
   methods: {
     handleBackButton() {
