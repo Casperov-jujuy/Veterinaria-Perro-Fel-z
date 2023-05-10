@@ -39,7 +39,7 @@
             <div class="menu-indicator" :style="{ left: positionToMove, width: sliderWidth }"></div>
             <li class="menu-item" v-for="link in links" :key="link.id" @click="sliderIndicator(link.id, 0)"
               :ref="'menu-item_' + link.id">
-              <RouterLink v-slot="{ route }" :to="`${link.to}`" class="menu-link" active-class=""
+              <RouterLink v-slot="{ route }" :to="`${link.to}`" class="menu-link" active-class="font-bold text-teal-700"
                 :class="link.id === selectedIndex ? 'active' : null">
                 <span>{{ link.text }}</span>
               </RouterLink>
@@ -54,7 +54,7 @@
         <ul class="my-auto mx-auto w-full py-6">
           <li class="py-6" v-for="link in links" :key="link.id">
             <RouterLink v-slot="{ route }" :to="`${link.to}`" @click="toggleMenu()" class="text-2xl text-gray-600"
-              active-class="font-bold text-[#208875] border-b-4 border-[#208875]"
+              active-class="font-bold text-teal-700 border-b-4 border-[#208875]"
               :class="link.id === selectedIndex ? 'active' : null">
               <span>{{ link.text }}</span>
             </RouterLink>
