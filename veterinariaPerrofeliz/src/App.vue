@@ -83,7 +83,7 @@ window.onscroll = () => {
     <RouterView v-slot="{ Component }">
       <Transition enter-active-class="animate__animated animate__fadeInUp"
         leave-active-class="animate__animated animate__fadeOutDown" mode="out-in">
-        <component :is="Component" @modalGroup="modalGroup" class="mx-auto" />
+        <component :is="Component" @scrollToTop="scrollToTop" @modalGroup="modalGroup" class="mx-auto" />
       </Transition>
     </RouterView>
 
