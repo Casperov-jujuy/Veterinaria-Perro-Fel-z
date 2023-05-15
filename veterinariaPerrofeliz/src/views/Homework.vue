@@ -250,7 +250,7 @@ const show3 = ref(false)
                     opacity: 1, scale: 1,
                     transition: { delay: 0.1, duration: 0.75 }
                 }" :exit="{ opacity: 0, scale: 0.6 }">
-                <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl" @click="show = !show">
+                <button class="block text-gray-900 fixed top-8 right-8 scale-110 z-30 max-w-7xl" @click="show = !show">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
                 </button>
                 <div class="grid grid-cols-1 xl:grid-cols-2">
@@ -285,7 +285,7 @@ const show3 = ref(false)
                     opacity: 1, scale: 1,
                     transition: { delay: 0.1, duration: 0.75 }
                 }" :exit="{ opacity: 0, scale: 0.6 }">
-                <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+                <button class="block text-gray-900 fixed top-8 right-8 scale-110 z-30 max-w-7xl"
                     @click="show1 = !show1">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
                 </button>
@@ -315,7 +315,7 @@ const show3 = ref(false)
                     opacity: 1, scale: 1,
                     transition: { delay: 0.1, duration: 0.75 }
                 }" :exit="{ opacity: 0, scale: 0.6 }">
-                <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+                <button class="block text-gray-900 fixed top-8 right-8 scale-110 z-30 max-w-7xl"
                     @click="show2 = !show2">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
                 </button>
@@ -344,7 +344,7 @@ const show3 = ref(false)
                     opacity: 1, scale: 1,
                     transition: { delay: 0.1, duration: 0.75 }
                 }" :exit="{ opacity: 0, scale: 0.6 }">
-                <button class="block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
+                <button class="block text-gray-900 fixed top-8 right-8 scale-110 z-30 max-w-7xl"
                     @click="show3 = !show3">
                     <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
                 </button>
@@ -367,7 +367,7 @@ const show3 = ref(false)
         </Presence>
     </div>
 </template>
-<style>
+<style scoped>
 .title-line {
     display: flex;
     align-items: center;

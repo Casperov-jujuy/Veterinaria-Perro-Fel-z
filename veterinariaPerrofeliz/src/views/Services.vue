@@ -96,6 +96,30 @@ import { onMounted, ref } from 'vue';
 import { Motion, Presence } from "motion/vue";
 import card from '@/components/card.vue';
 
+
+
+import imagen1 from '@/assets/img/service1.webp';
+import imagen2 from '@/assets/img/service2.webp';
+import imagen3 from '@/assets/img/service3.webp';
+import imagen4 from '@/assets/img/service4.webp';
+import imagen5 from '@/assets/img/service5.webp';
+import imagen6 from '@/assets/img/service6.webp';
+import imagen7 from '@/assets/img/service7.webp';
+import imagen8 from '@/assets/img/service8.webp';
+import imagen9 from '@/assets/img/service9.webp';
+import imagen10 from '@/assets/img/service10.webp';
+import imagen11 from '@/assets/img/service11.webp';
+import imagen12 from '@/assets/img/service12.webp';
+import imagen13 from '@/assets/img/service13.webp';
+import imagen14 from '@/assets/img/service14.webp';
+import imagen15 from '@/assets/img/service15.webp';
+import imagen16 from '@/assets/img/service16.webp';
+import imagen17 from '@/assets/img/service17.webp';
+import imagen18 from '@/assets/img/service18.webp';
+import imagen19 from '@/assets/img/service19.webp';
+import imagen20 from '@/assets/img/service20.webp';
+import imagen21 from '@/assets/img/service21.webp';
+
 const selectedInfo = ref({
     title: "",
     img: "",
@@ -114,121 +138,113 @@ function selectNewInfo(i) {
 const images = ref([
     {
         title: "Tratamiento Médico",
-        img: "./src/assets/img/service2.webp",
+        img: imagen2,
         category: "1",
         description: "Tu perro merece lo mejor cuando se trata de su salud, y en Perro Feliz estamos comprometidos a proporcionar tratamientos médicos de alta calidad para mantener a tu mascota saludable y feliz. Nuestro equipo de veterinarios expertos evaluará a tu perro y prescribirá el tratamiento adecuado para tratar cualquier problema de salud que pueda presentarse, brindando un cuidado de primera clase para tu perro.",
     }, {
         title: "Lavado perro feliz(máquina)",
-        img: "./src/assets/img/service21.webp",
+        img: imagen21,
         category: "2",
         description: "Es el sistema patentado llamado módulo sanitario Perro Feliz. El cual cuenta con indicadores, luces y ráfagas de vapor entre otras cosas, para el lavado automatizado de su mascota.",
     },
     {
         title: "Servicio Vacunatorio",
-        img: "./src/assets/img/service8.webp",
+        img: imagen8,
         category: "1",
         description: "Las vacunas son la forma más efectiva para luchar contra ciertas enfermedades muy peligrosas. Ellas protegen a su mascota de diferentes enfermedades que pueden ser peligrosas para su salud. Aunque no son obligatorias, sí hay una serie de vacunas esenciales que les sugerimos para proteger a tu compañero de problemas más graves.",
     }, {
         title: "Tratamiento anti-pulgas",
-        img: "./src/assets/img/service19.webp",
+        img: imagen19,
         category: "2",
         description: "En nuestra Veterinaria, ofrecemos un tratamiento antipulgas personalizado que ha sido desarrollado por nuestro equipo de profesionales, teniendo en cuenta la sensibilidad y características de la piel de cada mascota.",
     },
     {
         title: "Diagnóstico",
-        img: "./src/assets/img/service1.webp",
+        img: imagen1,
         category: "1",
         description: "Nuestros equipos de profesionales tienen una variedad de herramientas y técnicas para ayudar a diagnosticar problemas de salud en las mascotas. Los diagnósticos pueden incluir análisis de sangre, orina y heces, así como radiografías, ecografías, entre otros.",
     }, {
         title: "Venta de alimentos y accesorios",
-        img: "./src/assets/img/service14.webp",
+        img: imagen14,
         category: "3",
         description: "En Perro Feliz, también ofrecemos una amplia variedad de alimentos y accesorios para mascotas de alta calidad. Desde alimentos especializados hasta juguetes y ropa, tenemos todo lo que necesitas para mantener a tu amigo peludo saludable y feliz.",
     }, {
         title: "Lavado a mano",
-        img: "./src/assets/img/service6.webp",
+        img: imagen6,
         category: "2",
         description: "Es el servicio más personalizado que ofrecemos donde un personal capacitado se encarga del baño de su mascota.",
     },
     {
         title: "Prescripción",
-        img: "./src/assets/img/service9.webp",
+        img: imagen9,
         category: "1",
         description: "son recetas emitidas por el veterinario pueden incluir una amplia variedad de medicamentos y tratamientos, como antibióticos entre otros.",
     }, {
         title: "Corte de pelo",
-        img: "./src/assets/img/service5.webp",
+        img: imagen5,
         category: "2",
         description: "En nuestra veterinaria ofrecemos servicios de peluquería canina, incluyendo cortes de pelo a medida para cada mascota. Contamos con peluqueros profesionales y experimentados que saben cómo tratar a los animales con cuidado y paciencia, utilizando técnicas de corte seguras y efectivas.",
     },
     {
         title: "Cirugías",
-        img: "./src/assets/img/service10.webp",
+        img: imagen10,
         category: "1",
         description: "Las cirugías son una parte importante del cuidado de la salud de las mascotas. Los tipos de cirugías que se realizan en nuestra veterinaria pueden variar desde procedimientos de rutina, hasta cirugías más complejas y lesiones graves.",
     }, {
         title: "Eutanasia",
-        img: "./src/assets/img/service4.webp",
+        img: imagen4,
         category: "2",
         description: "Sabemos lo difícil que puede ser tomar decisiones importantes sobre la salud de tu mascota, y en Perro Feliz, estamos aquí para apoyarte. Nuestro servicio de eutanasia es realizado con compasión y respeto, garantizando que tu perro no sufra durante el proceso. Nos aseguramos de que tanto tú como él reciban la atención y el apoyo que merecen en este difícil momento.",
     },
     {
         title: "Castración/estelirización",
-        img: "./src/assets/img/service11.webp",
+        img: imagen11,
         category: "1",
         description: "La castración es un procedimiento quirúrgico común, puede tener muchos beneficios para la salud y el bienestar de las mascotas. En los machos, puede reducir el riesgo de enfermedades como el cáncer testicular y de próstata, así como disminuir la agresividad y el comportamiento territorial. En las hembras, la castración puede prevenir enfermedades del sistema reproductivo, como la piometra, y reducir el riesgo de cáncer de mama y ovarios.",
     }, {
         title: "Limpieza dental",
-        img: "./src/assets/img/service7.webp",
+        img: imagen7,
         category: "2",
         description: "En nuestra veterinaria incorporamos para la salud bucal de su mascota, nuestro barniz protector patentado que cubre decoloraciones desagradables de los dientes de su mascota.",
     },
     {
         title: "Servicio de emergencias",
-        img: "./src/assets/img/service12.webp",
+        img: imagen12,
         category: "1",
         description: "Las emergencias pueden ocurrir en cualquier momento y pueden ser causadas por diversas razones, como accidentes, enfermedades repentinas o complicaciones en procedimientos médicos. Tenemos a disposición personal altamente capacitado y equipo especializado para ofrecer atención urgente.",
     }, {
         title: "Adopción de mascotas",
-        img: "./src/assets/img/service15.webp",
+        img: imagen15,
         category: "3",
         description: "Colaboramos con organizaciones sin fines de lucro para promover la adopción de animales abandonados o rescatados.",
     },
     {
         title: "Tratamiento de hormonas",
-        img: "./src/assets/img/service20.webp",
+        img: imagen20,
         category: "1",
         description: "El tratamiento con hormonas patentado en perros mayores con pedigrí es una práctica común en la medicina veterinaria. A medida que los perros envejecen, pueden experimentar cambios que afectan su salud y bienestar. Los veterinarios pueden recetar un tratamiento hormonal para ayudar a equilibrar los niveles hormonales del perro y mejorar su calidad de vida.",
     },
-
-
-
-
-
     {
         title: "Pedicura",
-        img: "./src/assets/img/service13.webp",
+        img: imagen13,
         category: "2",
         description: "Es otro de los servicios personalizados que ofrecemos, se realiza mediante el corte y limado de las uñas de las mascotas para mantenerlas en una longitud y forma adecuadas. Utilizando herramientas especiales, como cortaúñas y limas, para realizar el procedimiento de manera segura, evitando algún daño o sangrado en las uñas.",
     }, {
         title: "Guardería de mascotas",
-        img: "./src/assets/img/service17.webp",
+        img: imagen17,
         category: "3",
         description: "¿Te vas unos días de viaje? Ofrecemos una guardería de mascotas con instalaciones de alta calidad y personal atento para asegurarnos de que su perro esté seguro y feliz mientras estás fuera.",
     },
-
-
-
     {
         title: "Paseo de mascotas",
-        img: "./src/assets/img/service16.webp",
+        img: imagen16,
         category: "3",
         description: "En Perro Feliz ofrecemos servicios de paseo de perros personalizados para asegurarnos de que tu amigo peludo obtenga la cantidad justa de ejercicio y diversión que necesita para mantenerse saludable y feliz.",
     },
 
     {
         title: "Te acompañamos",
-        img: "./src/assets/img/service18.webp",
+        img: imagen18,
         category: "3",
         description: "Queremos estar ahí para ti y tu mascota en los momentos difíciles. Si lamentablemente tu mascota fallece, te ofrecemos un servicio de entrega de un cupón de descuento para que puedas utilizarlo en el futuro cuando decidas adoptar un nuevo compañero. Sabemos que tu mascota nunca será reemplazable, pero esperamos que este gesto pueda hacerte sentir que estamos contigo en cada paso del camino.",
     },
@@ -241,8 +257,6 @@ const links = ref([
     'Otros servicios',
 ]);
 const selected = ref(0);
-const seven = ref(null);
-
 
 // const underlineText=(n)=>{
 //     selected.value = n;
@@ -259,14 +273,12 @@ const menu_item_0 = ref(null);
 const menu_item_1 = ref(null);
 const menu_item_2 = ref(null);
 const menu_item_3 = ref(null);
-const menu_item_4 = ref(null);
 
 const menuItems = {
     "menu_item_0": menu_item_0,
     "menu_item_1": menu_item_1,
     "menu_item_2": menu_item_2,
     "menu_item_3": menu_item_3,
-    "menu_item_4": menu_item_4,
 }
 
 // function sliderIndicator(id) {
@@ -279,19 +291,19 @@ const menuItems = {
 //     console.log(positionToMove());
 //     console.log(sliderWidth());
 // };
-function bold(id) {
-    let el = menuItems[`menu_item_${id}`];
-    el.value[0].classList.add("text-teal-600", "font-bold", "scale-105", "border-b-4", "border-teal-600");
-    for (let i = 0; i < 4; i++) {
-        if (i != id) {
-            menuItems[`menu_item_${i}`].value[0].classList.remove("text-teal-600", "font-bold", "scale-105", "border-b-4", "border-teal-600");
-        };
-    };
-    selected.value = id;
-};
-onMounted(() => {
-    bold(0);
-})
+// function bold(id) {
+//     let el = menuItems[`menu_item_${id}`];
+//     el.value[0].classList.add("text-teal-600", "font-bold", "scale-105", "border-b-4", "border-teal-600");
+//     for (let i = 0; i < 4; i++) {
+//         if (i != id) {
+//             menuItems[`menu_item_${i}`].value[0].classList.remove("text-teal-600", "font-bold", "scale-105", "border-b-4", "border-teal-600");
+//         };
+//     };
+//     selected.value = id;
+// };
+// onMounted(() => {
+//     bold(0);
+// })
 
 const desplazamiento = ref(0);
 const isShown = ref(true);
@@ -301,7 +313,7 @@ const hVar = ref('340');
 
 window.addEventListener('resize', function(event) {
   if (window.innerWidth <= 767) {
-    hVar.value = '570';
+    hVar.value = '700';
   } else {
     hVar.value = '340';
   }
@@ -364,8 +376,8 @@ const scrollToTop = () => {
                 <section id="links" class="space-x-12 px-12 text-gray-500 text-xl py-8 font-light">
                     <div class="buttons relative space-x-4">
                         <nav class="space-x-8 space-y-4 md:space-y-0">
-                            <button v-for="(e, index) in links" :key="index" @click="bold(`${index}`)"
-                                :ref="'menu_item_' + index" class="transition duration-300">
+                            <button v-for="(e, index) in links" :key="index" @click="selected=index;"
+                                v-bind:class="{'selected': selected === index}" class="transition duration-300">
                                 {{ e }}
                             </button>
                         </nav>
@@ -375,10 +387,10 @@ const scrollToTop = () => {
                     </div>
                 </section>
                 <section class="px-4 sm:px-12">
-                    <TransitionGroup name="fade" tag="ul" mode="out-in" class="md:text-center w-[500px] md:w-auto overflow-hidden">
+                    <TransitionGroup name="fade" tag="ul" mode="out-in" class="text-center overflow-hidden">
                         <li v-for="i in images" :key="i.title" class="inline-flex">
                             <button @click="selectNewInfo(i); scrollToTop(); isShown = false"
-                                class="hover:scale-105 transition duration-300 border-2 mx-1 my-1 rounded-md w-[500px] md:w-[300px] xl:w-[380px]"
+                                class="hover:scale-105 transition duration-300 border-2 mx-1 my-1 rounded-md w-[280px] min-[400px]:w-[320px] min-[450px]:w-[400px] sm:w-[400px] md:w-[300px] xl:w-[380px]"
                                 v-if="i.category == selected || selected == 0">
                                 <img v-show="i.category == selected || selected == 0" :src="i.img"
                                     class="mx-auto h-72 w-full object-cover overflow-hidden rounded-t-md" alt="img">
@@ -403,6 +415,10 @@ const scrollToTop = () => {
 .animate__animated.animate__zoomOut,
 .animate__animated.animate__zoomIn {
     --animate-duration: 0.4s;
+}
+
+.selected{
+    @apply text-teal-600 font-bold scale-105 border-b-4 border-teal-600;
 }
 
 .moving-div {
