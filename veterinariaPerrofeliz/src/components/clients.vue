@@ -11,9 +11,9 @@
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }" class="cursor-grab rounded-md mx-4">
-    <swiper-slide><img src="@/assets/img/a1.webp" alt=""></swiper-slide>
-    <swiper-slide><img src="@/assets/img/a2.webp" alt=""></swiper-slide>
-    <swiper-slide><img src="@/assets/img/a3.webp" alt=""></swiper-slide>
+    <swiper-slide><img src="@/assets/img/a1.webp" class="w-full h-auto" alt=""></swiper-slide>
+    <swiper-slide><img src="@/assets/img/a2.webp" class="w-full h-auto" alt=""></swiper-slide>
+    <swiper-slide><img src="@/assets/img/a3.webp" class="w-full h-auto" alt=""></swiper-slide>
     ...
   </swiper>
 </template>

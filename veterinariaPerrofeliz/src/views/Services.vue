@@ -93,9 +93,6 @@ export default {
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import { Motion, Presence } from "motion/vue";
-import card from '@/components/card.vue';
-
 const selectedInfo = ref({
     title: "",
     img: "",
