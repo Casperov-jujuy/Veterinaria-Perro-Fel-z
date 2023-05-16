@@ -92,7 +92,7 @@ export default {
 </script> -->
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { Motion, Presence } from "motion/vue";
 import card from '@/components/card.vue';
 
@@ -301,25 +301,32 @@ const menuItems = {
 //     };
 //     selected.value = id;
 // };
-// onMounted(() => {
-//     bold(0);
-// })
 
-const desplazamiento = ref(0);
+
+
 const isShown = ref(true);
 const isShownPhone = ref(true);
 const hVar = ref('340');
+const ventana = ref(null);
 
+
+const change = ref(true);
+const redimensionar = () => {
+    console.log(ventana.value.offsetHeight);
+    hVar.value = ventana.value.offsetHeight;
+}
+
+watch(change, (e) => {
+    setTimeout(() => {
+        hVar.value = ventana.value.clientHeight;
+    }, 450);
+});
 
 window.addEventListener('resize', function(event) {
-  if (window.innerWidth <= 767) {
-    hVar.value = '700';
-  } else {
-    hVar.value = '340';
-  }
+    hVar.value = ventana.value.clientHeight;
 });
 const scrollToTop = () => {
-    window.scrollTo({ top: 130, behavior: "smooth" });
+    window.scrollTo({ top: 310, behavior: "smooth" });
 };
 // function positionToMove() {
 //     return sliderPosition + "px";
@@ -327,6 +334,7 @@ const scrollToTop = () => {
 // function sliderWidth() {
 //     return selectedElementWidth + "px";
 // }
+
 </script>
 <template>
     <div class="max-w-7xl mx-auto">
@@ -341,7 +349,7 @@ const scrollToTop = () => {
         </div>
         <Transition enter-active-class="animate__animated animate__zoomIn"
             leave-active-class="animate__animated animate__zoomOut" v-show="flagInfo" mode="out-in">
-            <section class="absolute w-full mx-auto max-w-7xl z-[1]" :key="selectedInfo.title">
+            <section ref="ventana" class="absolute bg-white w-full mx-auto max-w-7xl z-[1]" :key="selectedInfo.title">
                 <div class="grid grid-cols-1 md:grid-cols-2 px-4 py-2 border-y-2 ">
                     <div class="col-span-1">
                         <img :src="selectedInfo.img" class="h-80 w-full object-cover" alt="">
@@ -349,7 +357,7 @@ const scrollToTop = () => {
                     <div class="col-span-1 grid grid-row-6 grid-col-1">
                         <div class="row-span-1 absolute right-0 top-0 mr-4 mt-4">
                             <div class="w-full">
-                                <button @click="isShown = true;isShownPhone=true; flagInfo = false" class="mx-auto ">
+                                <button @click="isShown = true; isShownPhone = true; flagInfo = false" class="mx-auto ">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="h-10 border-2 border-red-400 fill-white hover:scale-110 transition duration-300 bg-red-400 rounded-full"
                                         viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -370,14 +378,14 @@ const scrollToTop = () => {
             </section>
         </Transition>
         <!-- <button @click="moveDown()">Mostrar/ocultar</button> -->
-        <div class="relative" :style="{ marginBottom: isShown ? '0' : hVar+'px' }">
-            <div :style="{ top: isShown ? '0' : hVar+'px' }" :class="{}"
+        <div class="relative" :style="{ marginBottom: isShown ? '0' : hVar + 'px' }">
+            <div :style="{ top: isShown ? '0' : hVar + 'px' }" :class="{}"
                 class="bg-white relative transition-all ease-in-out duration-500 top-0 left-0 w-full">
-                <section id="links" class="space-x-12 px-12 text-gray-500 text-xl py-8 font-light">
+                <section id="links" class="space-x-12 px-12 text-gray-500 text-xl pb-4 md:py-6 font-light">
                     <div class="buttons relative space-x-4">
                         <nav class="space-x-8 space-y-4 md:space-y-0">
-                            <button v-for="(e, index) in links" :key="index" @click="selected=index;"
-                                v-bind:class="{'selected': selected === index}" class="transition duration-300">
+                            <button v-for="(e, index) in links" :key="index" @click="selected = index"
+                                v-bind:class="{ 'selected': selected === index }" class="transition duration-300">
                                 {{ e }}
                             </button>
                         </nav>
@@ -389,7 +397,7 @@ const scrollToTop = () => {
                 <section class="px-4 sm:px-12">
                     <TransitionGroup name="fade" tag="ul" mode="out-in" class="text-center overflow-hidden">
                         <li v-for="i in images" :key="i.title" class="inline-flex">
-                            <button @click="selectNewInfo(i); scrollToTop(); isShown = false"
+                            <button @click="selectNewInfo(i); scrollToTop(); isShown = false; change = !change"
                                 class="hover:scale-105 transition duration-300 border-2 mx-1 my-1 rounded-md w-[280px] min-[400px]:w-[320px] min-[450px]:w-[400px] sm:w-[400px] md:w-[300px] xl:w-[380px]"
                                 v-if="i.category == selected || selected == 0">
                                 <img v-show="i.category == selected || selected == 0" :src="i.img"
@@ -417,7 +425,7 @@ const scrollToTop = () => {
     --animate-duration: 0.4s;
 }
 
-.selected{
+.selected {
     @apply text-teal-600 font-bold scale-105 border-b-4 border-teal-600;
 }
 
