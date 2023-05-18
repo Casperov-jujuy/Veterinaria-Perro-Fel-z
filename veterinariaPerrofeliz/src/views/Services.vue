@@ -101,7 +101,7 @@ import card from '@/components/card.vue';
 import imagen1 from '@/assets/img/service1.webp';
 import imagen2 from '@/assets/img/service2.webp';
 import imagen3 from '@/assets/img/service3.webp';
-import imagen4 from '@/assets/img/service4.webp';
+// import imagen4 from '@/assets/img/service4.webp';
 import imagen5 from '@/assets/img/service5.webp';
 import imagen6 from '@/assets/img/service6.webp';
 import imagen7 from '@/assets/img/service7.webp';
@@ -119,6 +119,9 @@ import imagen18 from '@/assets/img/service18.webp';
 import imagen19 from '@/assets/img/service19.webp';
 import imagen20 from '@/assets/img/service20.webp';
 import imagen21 from '@/assets/img/service21.webp';
+import imagen22 from '@/assets/img/service22.avif';
+import imagen23 from '@/assets/img/service23.webp';
+import imagen24 from '@/assets/img/service24.webp';
 
 const selectedInfo = ref({
     title: "",
@@ -142,10 +145,10 @@ const images = ref([
         category: "1",
         description: "Tu perro merece lo mejor cuando se trata de su salud, y en Perro Feliz estamos comprometidos a proporcionar tratamientos médicos de alta calidad para mantener a tu mascota saludable y feliz. Nuestro equipo de veterinarios expertos evaluará a tu perro y prescribirá el tratamiento adecuado para tratar cualquier problema de salud que pueda presentarse, brindando un cuidado de primera clase para tu perro.",
     }, {
-        title: "Lavado perro feliz(máquina)",
-        img: imagen21,
+        title: "Lavado Perro Feliz (máquina)",
+        img: imagen24,
         category: "2",
-        description: "Es el sistema patentado llamado módulo sanitario Perro Feliz. El cual cuenta con indicadores, luces y ráfagas de vapor entre otras cosas, para el lavado automatizado de su mascota.",
+        description: "Es nuestro servicio de acicalamiento más popular. Donde su mascota es colocada en contenedores confortables (patentado) que lo transporta dentro de nuestras instalaciones. El módulo sanitario Perro Feliz es un sistema de lavado automatizado de vanguardia que ha sido cuidadosamente diseñado para brindar una experiencia de lavado segura, cómoda y efectiva para tu perro. Con sus indicadores, luces y ráfagas de vapor, garantiza la protección y el bienestar de tu mascota durante todo el proceso de lavado.",
     },
     {
         title: "Servicio Vacunatorio",
@@ -175,10 +178,10 @@ const images = ref([
         description: "Es el servicio más personalizado que ofrecemos donde un personal capacitado se encarga del baño de su mascota.",
     },
     {
-        title: "Prescripción",
+        title: "Prescripciones",
         img: imagen9,
         category: "1",
-        description: "son recetas emitidas por el veterinario pueden incluir una amplia variedad de medicamentos y tratamientos, como antibióticos entre otros.",
+        description: "En nuestra clínica, nos comprometemos a brindarte un servicio integral que incluye la emisión de prescripciones precisas y claras, así como el asesoramiento necesario para su correcta administración. Estamos aquí para responder todas tus preguntas y brindarte la tranquilidad de saber que estás tomando las medidas adecuadas para el cuidado de tu mascota.",
     }, {
         title: "Corte de pelo",
         img: imagen5,
@@ -190,18 +193,20 @@ const images = ref([
         img: imagen10,
         category: "1",
         description: "Las cirugías son una parte importante del cuidado de la salud de las mascotas. Los tipos de cirugías que se realizan en nuestra veterinaria pueden variar desde procedimientos de rutina, hasta cirugías más complejas y lesiones graves.",
-    }, {
-        title: "Eutanasia",
-        img: imagen4,
-        category: "2",
-        description: "Sabemos lo difícil que puede ser tomar decisiones importantes sobre la salud de tu mascota, y en Perro Feliz, estamos aquí para apoyarte. Nuestro servicio de eutanasia es realizado con compasión y respeto, garantizando que tu perro no sufra durante el proceso. Nos aseguramos de que tanto tú como él reciban la atención y el apoyo que merecen en este difícil momento.",
     },
+    // {
+    //     title: "Eutanasia",
+    //     img: imagen4,
+    //     category: "2",
+    //     description: "Sabemos lo difícil que puede ser tomar decisiones importantes sobre la salud de tu mascota, y en Perro Feliz, estamos aquí para apoyarte. Nuestro servicio de eutanasia es realizado con compasión y respeto, garantizando que tu perro no sufra durante el proceso. Nos aseguramos de que tanto tú como él reciban la atención y el apoyo que merecen en este difícil momento.",
+    // },
     {
         title: "Castración/estelirización",
         img: imagen11,
         category: "1",
         description: "La castración es un procedimiento quirúrgico común, puede tener muchos beneficios para la salud y el bienestar de las mascotas. En los machos, puede reducir el riesgo de enfermedades como el cáncer testicular y de próstata, así como disminuir la agresividad y el comportamiento territorial. En las hembras, la castración puede prevenir enfermedades del sistema reproductivo, como la piometra, y reducir el riesgo de cáncer de mama y ovarios.",
-    }, {
+    },
+    {
         title: "Limpieza dental",
         img: imagen7,
         category: "2",
@@ -212,7 +217,8 @@ const images = ref([
         img: imagen12,
         category: "1",
         description: "Las emergencias pueden ocurrir en cualquier momento y pueden ser causadas por diversas razones, como accidentes, enfermedades repentinas o complicaciones en procedimientos médicos. Tenemos a disposición personal altamente capacitado y equipo especializado para ofrecer atención urgente.",
-    }, {
+    }, 
+    {
         title: "Adopción de mascotas",
         img: imagen15,
         category: "3",
@@ -241,20 +247,31 @@ const images = ref([
         category: "3",
         description: "En Perro Feliz ofrecemos servicios de paseo de perros personalizados para asegurarnos de que tu amigo peludo obtenga la cantidad justa de ejercicio y diversión que necesita para mantenerse saludable y feliz.",
     },
-
+    {
+        title: "Música Celestial",
+        img: imagen22,
+        category: "3",
+        description: "En nuestras instalaciones incorporamos para garantizar una estadía placentera para su mascota, un tipo de música de cierta frecuencia inaudible por el oído humano, que tienen un efecto tranquilizante y casi hipnótico en los perros.",
+    },
+    {
+        title: "Recordatorios",
+        img: imagen23,
+        category: "3",
+        description: "Nuestro sistema de recordatorios personalizados te mantendrá informado sobre las fechas de vacunación, desparasitación, chequeos médicos y otros cuidados esenciales para tus mascotas. Nos encargaremos de recordarte con anticipación cada evento importante, para que puedas planificar y asegurarte de que tus animales reciban la atención necesaria en el momento adecuado.",
+    },
     {
         title: "Te acompañamos",
         img: imagen18,
         category: "3",
-        description: "Queremos estar ahí para ti y tu mascota en los momentos difíciles. Si lamentablemente tu mascota fallece, te ofrecemos un servicio de entrega de un cupón de descuento para que puedas utilizarlo en el futuro cuando decidas adoptar un nuevo compañero. Sabemos que tu mascota nunca será reemplazable, pero esperamos que este gesto pueda hacerte sentir que estamos contigo en cada paso del camino.",
+        description: "Queremos estar ahí para ti y tu mascota en los momentos difíciles. Si lamentablemente tu mascota fallece, te ofrecemos un servicio de entrega de un cupón de descuento para que puedas utilizarlo en las tiendas locales en el futuro cuando decidas adoptar un nuevo compañero. Sabemos que tu mascota nunca será reemplazable, pero esperamos que este gesto pueda hacerte sentir que estamos contigo en cada paso del camino.",
     },
 ]);
 
 const links = ref([
     'Todos',
-    'Principales',
-    'Adicionales',
-    'Otros servicios',
+    'Servicio Médico',
+    'Acicalamiento',
+    'Otros',
 ]);
 const selected = ref(0);
 
@@ -349,7 +366,7 @@ const scrollToTop = () => {
         </div>
         <Transition enter-active-class="animate__animated animate__zoomIn"
             leave-active-class="animate__animated animate__zoomOut" v-show="flagInfo" mode="out-in">
-            <section ref="ventana" class="absolute bg-white w-full mx-auto max-w-7xl z-[1]" :key="selectedInfo.title">
+            <section ref="ventana" class="absolute mt-2 bg-white w-full mx-auto max-w-7xl z-[1]" :key="selectedInfo.title">
                 <div class="grid grid-cols-1 md:grid-cols-2 px-4 py-2 border-y-2 ">
                     <div class="col-span-1">
                         <img :src="selectedInfo.img" class="h-80 w-full object-cover" alt="">
