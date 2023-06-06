@@ -111,14 +111,10 @@ import imagen10 from '@/assets/img/service10.webp';
 import imagen11 from '@/assets/img/service11.webp';
 import imagen12 from '@/assets/img/service12.webp';
 import imagen13 from '@/assets/img/service13.webp';
-import imagen14 from '@/assets/img/service14.webp';
-import imagen15 from '@/assets/img/service15.webp';
-import imagen16 from '@/assets/img/service16.webp';
-import imagen17 from '@/assets/img/service17.webp';
+import imagen16 from '@/assets/img/service25.webp';
 import imagen18 from '@/assets/img/service18.webp';
 import imagen19 from '@/assets/img/service19.webp';
 import imagen20 from '@/assets/img/service20.webp';
-import imagen21 from '@/assets/img/service21.webp';
 import imagen22 from '@/assets/img/service22.avif';
 import imagen23 from '@/assets/img/service23.webp';
 import imagen24 from '@/assets/img/service24.webp';
@@ -145,7 +141,7 @@ const images = ref([
         category: "1",
         description: "Tu perro merece lo mejor cuando se trata de su salud, y en Perro Feliz estamos comprometidos a proporcionar tratamientos médicos de alta calidad para mantener a tu mascota saludable y feliz. Nuestro equipo de veterinarios expertos evaluará a tu perro y prescribirá el tratamiento adecuado para tratar cualquier problema de salud que pueda presentarse, brindando un cuidado de primera clase para tu perro.",
     }, {
-        title: "Lavado Perro Feliz (máquina)",
+        title: "Lavado Perro Feliz",
         img: imagen24,
         category: "2",
         description: "Es nuestro servicio de acicalamiento más popular. Donde su mascota es colocada en contenedores confortables (patentado) que lo transporta dentro de nuestras instalaciones. El módulo sanitario Perro Feliz es un sistema de lavado automatizado de vanguardia que ha sido cuidadosamente diseñado para brindar una experiencia de lavado segura, cómoda y efectiva para tu perro. Con sus indicadores, luces y ráfagas de vapor, garantiza la protección y el bienestar de tu mascota durante todo el proceso de lavado.",
@@ -166,12 +162,14 @@ const images = ref([
         img: imagen1,
         category: "1",
         description: "Nuestros equipos de profesionales tienen una variedad de herramientas y técnicas para ayudar a diagnosticar problemas de salud en las mascotas. Los diagnósticos pueden incluir análisis de sangre, orina y heces, así como radiografías, ecografías, entre otros.",
-    }, {
-        title: "Venta de alimentos y accesorios",
-        img: imagen14,
-        category: "3",
-        description: "En Perro Feliz, también ofrecemos una amplia variedad de alimentos y accesorios para mascotas de alta calidad. Desde alimentos especializados hasta juguetes y ropa, tenemos todo lo que necesitas para mantener a tu amigo peludo saludable y feliz.",
-    }, {
+    }
+    // ,{
+    //     title: "Venta de alimentos y accesorios",
+    //     img: imagen14,
+    //     category: "3",
+    //     description: "En Perro Feliz, también ofrecemos una amplia variedad de alimentos y accesorios para mascotas de alta calidad. Desde alimentos especializados hasta juguetes y ropa, tenemos todo lo que necesitas para mantener a tu amigo peludo saludable y feliz.",
+    // }
+    , {
         title: "Lavado a mano",
         img: imagen6,
         category: "2",
@@ -218,12 +216,12 @@ const images = ref([
         category: "1",
         description: "Las emergencias pueden ocurrir en cualquier momento y pueden ser causadas por diversas razones, como accidentes, enfermedades repentinas o complicaciones en procedimientos médicos. Tenemos a disposición personal altamente capacitado y equipo especializado para ofrecer atención urgente.",
     }, 
-    {
-        title: "Adopción de mascotas",
-        img: imagen15,
-        category: "3",
-        description: "Colaboramos con organizaciones sin fines de lucro para promover la adopción de animales abandonados o rescatados.",
-    },
+    // {
+    //     title: "Adopción de mascotas",
+    //     img: imagen15,
+    //     category: "3",
+    //     description: "Colaboramos con organizaciones sin fines de lucro para promover la adopción de animales abandonados o rescatados.",
+    // },
     {
         title: "Tratamiento de hormonas",
         img: imagen20,
@@ -235,17 +233,18 @@ const images = ref([
         img: imagen13,
         category: "2",
         description: "Es otro de los servicios personalizados que ofrecemos, se realiza mediante el corte y limado de las uñas de las mascotas para mantenerlas en una longitud y forma adecuadas. Utilizando herramientas especiales, como cortaúñas y limas, para realizar el procedimiento de manera segura, evitando algún daño o sangrado en las uñas.",
-    }, {
-        title: "Guardería de mascotas",
-        img: imagen17,
-        category: "3",
-        description: "¿Te vas unos días de viaje? Ofrecemos una guardería de mascotas con instalaciones de alta calidad y personal atento para asegurarnos de que su perro esté seguro y feliz mientras estás fuera.",
-    },
+    }, 
+    // {
+    //     title: "Guardería de mascotas",
+    //     img: imagen17,
+    //     category: "3",
+    //     description: "¿Te vas unos días de viaje? Ofrecemos una guardería de mascotas con instalaciones de alta calidad y personal atento para asegurarnos de que su perro esté seguro y feliz mientras estás fuera.",
+    // },
     {
-        title: "Paseo de mascotas",
+        title: "Tarjetas de felicitación",
         img: imagen16,
         category: "3",
-        description: "En Perro Feliz ofrecemos servicios de paseo de perros personalizados para asegurarnos de que tu amigo peludo obtenga la cantidad justa de ejercicio y diversión que necesita para mantenerse saludable y feliz.",
+        description: "En Perro Feliz no nos olvidamos de los cumpleaños de nuestros amigos peludos. Enviaremos tarjetas de felicitaciones para demostrarte lo importante que tú y tu mascota son para nosotros.",
     },
     {
         title: "Música Celestial",
@@ -269,7 +268,7 @@ const images = ref([
 
 const links = ref([
     'Todos',
-    'Servicio Médico',
+    'Atención Médica',
     'Acicalamiento',
     'Otros',
 ]);

@@ -104,11 +104,11 @@ export default {
           to: "/contact",
           text: "CONTACTO",
         },
-        {
-          id: 6,
-          to: "/homework",
-          text: "📚✨",
-        }
+        // {
+        //   id: 6,
+        //   to: "/homework",
+        //   text: "📚✨",
+        // }
       ],
     };
   },

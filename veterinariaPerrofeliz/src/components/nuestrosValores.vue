@@ -91,10 +91,10 @@ onUnmounted(() => {
     <Presence>
       <Motion v-if="show4" class="box bg-[#F35D6D] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
         :initial="{ opacity: 0, y: 50 }" :animate="{
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.1 }
-        }" :exit="{ opacity: 0, y: 50 }">
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.1 }
+          }" :exit="{ opacity: 0, y: 50 }">
         <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
           @click="show4 = !show4">
           <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
@@ -131,10 +131,10 @@ onUnmounted(() => {
     <Presence>
       <Motion v-if="show1" class="box bg-[#7BBD64] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
         :initial="{ opacity: 0, x: 50 }" :animate="{
-          opacity: 1,
-          x: 0,
-          transition: { delay: 0.1 }
-        }" :exit="{ opacity: 0, x: -50 }">
+            opacity: 1,
+            x: 0,
+            transition: { delay: 0.1 }
+          }" :exit="{ opacity: 0, x: -50 }">
         <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
           @click="show1 = !show1">
           <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
@@ -173,10 +173,10 @@ onUnmounted(() => {
     <Presence>
       <Motion v-if="show2" class="box bg-[#F69F45] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
         :initial="{ opacity: 0, x: 50 }" :animate="{
-          opacity: 1,
-          x: 0,
-          transition: { delay: 0.1 }
-        }" :exit="{ opacity: 0, x: -50 }">
+            opacity: 1,
+            x: 0,
+            transition: { delay: 0.1 }
+          }" :exit="{ opacity: 0, x: -50 }">
         <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
           @click="show2 = !show2">
           <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
@@ -200,10 +200,10 @@ onUnmounted(() => {
     <Presence>
       <Motion v-if="show" class="box bg-blue-600 px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
         :initial="{ opacity: 0, y: 50 }" :animate="{
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.1 }
-        }" :exit="{ opacity: 0, y: 50 }">
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.1 }
+          }" :exit="{ opacity: 0, y: 50 }">
         <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
           @click="show = !show">
           <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
@@ -226,10 +226,10 @@ onUnmounted(() => {
     <Presence>
       <Motion v-if="show3" class="box bg-[#F1172F] px-4 xl:px-0 xl:absolute mx-auto text-white z-50"
         :initial="{ opacity: 0, y: 50 }" :animate="{
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.1 }
-        }" :exit="{ opacity: 0, y: 50 }">
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.1 }
+          }" :exit="{ opacity: 0, y: 50 }">
         <button class="hidden xl:block text-gray-900 absolute top-0 right-0 pr-10 pt-10 z-30 max-w-7xl"
           @click="show3 = !show3">
           <i class="fa-solid fa-angles-left text-white h-10 w-10 hover:scale-125 transition duration-300"></i>
@@ -288,4 +288,5 @@ onUnmounted(() => {
 img {
   width: 100%;
   z-index: 0;
-}</style>
+}
+</style>
